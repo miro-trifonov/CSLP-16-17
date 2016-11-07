@@ -1,0 +1,26 @@
+""" To run the program please pass as an argument a file which contains the following:
+lorryVolume <uint8 t>
+lorryMaxLoad <uint16 t>
+binServiceTime <uint16 t>
+binVolume <float>
+disposalDistrRate <float>
+disposalDistrShape <uint8 t>
+bagVolume <float>
+bagWeightMin <float>
+bagWeightMax <float>
+noAreas <uint8 t>
+areaIdx <uint8 t>
+serviceFreq <float>
+thresholdVal <float>
+noBins <uint16 t>
+roadsLayout
+0 <int8 t> <int8 t> ... <int8 t>
+<int8 t> 0 <int8 t> ... <int8 t>
+...
+...
+...
+... ...
+<int8 t> <int8 t> <int8 t> ... 0
+stopTime <float>
+warmUpTime <float>
+For comments please begin the line with  #"""
