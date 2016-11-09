@@ -7,7 +7,7 @@ class Area:
         self.threshold = threshold
         self.lorry = lorry
         self.bins = {}
-        for i in range(1, bins):
+        for i in range(1, int(bins)):
             self.bins[i] = thrashbin
         self.map = map
 

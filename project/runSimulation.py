@@ -1,3 +1,10 @@
+import createSimulation
+# import parser
+import Queue
+import random
+import math
+
+
 def parse_file(filename):
     arguments = {}
     expected_global_arguments = ['lorryVolume', 'lorryMaxLoad', 'binServiceTime', 'binVolume', 'disposalDistrRate',
@@ -47,44 +54,61 @@ def parse_file(filename):
         return arguments
     else:
         return None#
-# def validateInput(arguments, road_mode_not_finished):
-#     # TODO experimentation mode
-#     return True
-#     # global_arguments = [('lorryVolume', 'int'), ('lorryMaxLoad', 'int'), ('binServiceTime', 'int'),
-#     #                     ('binVolume', 'float'),
-#     #                     ('disposalDistrRate', 'float'), ('disposalDistrShape', 'int'),
-#     #                     ('bagVolume', 'float'), ('bagWeightMin', 'float'), ('bagWeightMax', 'float'),
-#     #                     ('noAreas', 'int'),
-#     #                     ('areaIdx', 'int'), ('serviceFreq', 'float'), ('thresholdVal', 'float'),
-#     #                     ('noBins', 'int'), ('roadsLayout', 'matrix'), ('areaIdx', 'int'), ('stopTime', 'float'),
-#     #                     ('warmUpTime', 'float'), ]
-#     # parse_problems = arguments.__len__() != expexted_args.__len__()
-#     # if parse_problems is True:
-#     #     return "Invalid number of arguments"
-#     #
-#     # for key in expexted_args:
-#     #     argument = arguments.get(key[0])
-#     #     if argument is None:
-#     #         parse_problems = True
-#     #         # will that work for python 2.7
-#     #         print '{} not specified'.format(key[0])
-#     #     else:
-#     #         if key[1] is 'int' and not argument.is_integer():
-#     #             print '{} should be integer'.format(key[0])
-#     #         elif key[1] is 'float' and not isinstance(argument, numbers.Number):
-#     #             print '{} should be float'.format(key[0])
-#     #         elif key[1] is 'matrix' and verifyIntegers(argument):
-#     #             print '{} should be a matrix'  # TODO
-#     #             # Note: the current configuration does not require the parameters to be in correct order, so I'm not checking for that
-#     #
-#     # if parse_problems is True:
-#     #     return True
-#     # else:
-#     #     return False
-#
-#
-# def verify_integers(argument):
-#     for row in argument:
-#         for number in row:
-#             number.isdigit()
+
+
+
+# TODO call that with input
+parameters = parse_file("input.txt")
+areas = createSimulation.create_model(parameters)
+time = 0
+event_queue = Queue.PriorityQueue()
+report = False
+bin_volume = parameters.get('binVolume')
+output = []
+
+
+def next_thrash_disposal(current_time):
+    new_time = float(current_time)
+    for k in range(0, int(parameters.get('disposalDistrShape'))):
+        q = float(parameters.get('disposalDistrRate'))
+        log = float(math.log(random.random()))
+        new_time += q * log * (-1)
+    return new_time
+
+
+def schedule_first_events():
+    for i in range(0, areas.__len__()):
+        area = areas[i]
+        next_service_time = area.service_frequency
+        event_queue.put((next_service_time, (area, 'collectGarbage')))
+        for thrashbin in area.bins:
+            next_trash_disposal_time = next_thrash_disposal(0)
+            event_queue.put((next_trash_disposal_time, (thrashbin, 'disposeTrash')))
+    event_queue.put((parameters.get('warmUpTime'), 'report'))
+
+
+def start_garbage_collection(truck):
+    return True
+
+schedule_first_events()
+
+while time < parameters.get('stopTime'):
+    event = event_queue.get()
+    time_now = event[0]
+    if time_now > parameters.get('stopTime'):
+        break
+    else:
+        object = event[1][1]
+        event_type = event[1][0]
+        if event_queue == 'collectGarbage':
+            start_garbage_collection(object)
+        elif event_queue == 'disposeTrash':
+            this_bin = object
+            bag = (bin_volume, random.randint(parameters.get('bagWeightMin'),parameters.get('bagWeightMax')))
+            this_bin.add_bag(bag)
+            next_disposal_time = next_thrash_disposal(time_now)
+            event_queue.put(next_disposal_time, (this_bin, 'disposeTrash'))
+
+
+
 

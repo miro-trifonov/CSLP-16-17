@@ -1,15 +1,15 @@
-1. A README file should be submitted, explaining your code structure;
-2. Valid compile.sh and simulate.sh scripts must be submitted;
-3. The submitted program compiles without errors and warnings;
-4. The program displays usage information if no input files are given;
-5. The program correctly performs parsing and validation of the input, including
-(a) checking for valid/invalid tokens;
-(b) verifying formats and magnitudes of parameters’ values;
-(c) identifying missing parameters and wrong order;
-(d) identifying experimentation directives;
-(e) distinguishing valid but unrealistic inputs and signalling these as warnings (e.g. disposal rate exceeds service rate, lorry capacity smaller than bin capacity, etc.).
-6. Your code must generate, schedule, and execute wasted disposal events correctly;
-7. Your program must produce valid and correctly formatted output;
-8. A suite of test input scripts must be submitted, demonstrating the level of testing you performed for Part 2;
-9. Your code should be appropriately commented;
-10. Your code must exhibit an easy to follow structure and re-usability.
+﻿1. A README file should be submitted, explaining your code structure; TODO
+2. Valid compile.sh and simulate.sh scripts must be submitted; TODO
+3. The submitted program compiles without errors and warnings; OBV
+4. The program displays usage information if no input files are given; TODO
+5. The program correctly performs parsing and validation of the input, including IN PROGRESS
+(a) checking for valid/invalid tokens; TODO
+(b) verifying formats and magnitudes of parameters’ values; TODO
+(c) identifying missing parameters and wrong order; IN PROGRESS
+(d) identifying experimentation directives; TODO
+(e) distinguishing valid but unrealistic inputs and signalling these as warnings (e.g. disposal rate exceeds service rate, lorry capacity smaller than bin capacity, etc.). TODO
+6. Your code must generate, schedule, and execute wasted disposal events correctly; DONE
+7. Your program must produce valid and correctly formatted output; TODO
+8. A suite of test input scripts must be submitted, demonstrating the level of testing you performed for Part 2; TODO
+9. Your code should be appropriately commented; TODO
+10. Your code must exhibit an easy to follow structure and re-usability. YES

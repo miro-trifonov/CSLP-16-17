@@ -8,14 +8,13 @@ class Bin:
         self.full = 0
 
     def add_bad(self, (bag_volume, bag_weight)):
-
+        self.weight += bag_weight
+        self.volume += bag_volume
         if self.volume + bag_volume > self.max_volume:
             self.full = 1
             print 'overflow'
             return 'overflow'
         else:
-            self.weight += bag_weight
-            self.volume += bag_volume
             self.full = self.volume / self.max_volume  # Make sure this is not an int
             math.floor(self.full * 100)
 
