@@ -1,6 +1,3 @@
-import bin
-
-
 class Lorry:
     def __init__(self, max_volume, max_load, lorry_id):
         self.max_volume = max_volume

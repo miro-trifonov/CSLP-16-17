@@ -7,6 +7,7 @@ import sys
 
 # TODO add check for correct row length in matrix length
 
+
 def parse_file(filename):
     arguments = {}
     is_valid = True
@@ -66,7 +67,7 @@ def parse_file(filename):
             area_id = tokens[1]
             area_ids.append(area_id)
             for arg in expected_area_arguments:
-                arguments["{} {}".format(arg, area_id)] = tokens[tokens.index(arg) + 1]
+                arguments["{} {}".format(arg, area_id)] = num(tokens[tokens.index(arg) + 1], "{} {}".format(arg, area_id), 'float')
             road_layout_input = 'expect_arg'
             remaining_road_matrix_len = int(arguments.get('noBins {}'.format(area_id))) + 1
         else:
@@ -126,5 +127,3 @@ def num(s, key, num_type):
         except ValueError:
             print "Error: \"{}\" is not a number in  {}".format(s, key)
             return False
-
-parse_file("input_invalid (4).txt")

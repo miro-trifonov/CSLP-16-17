@@ -3,7 +3,7 @@ lorryVolume 20
 # Maximum lorry load (kg)
 lorryMaxLoad 7000
 # Time required to empty a bin (in seconds)
-binServiceTime 130
+binServiceTime 130 
 # Bin volume (cubic metres)
 binVolume 2
 # Rate of the Erlang distribution of the disposal events (avg. no. per hour)
@@ -23,13 +23,13 @@ noAreas 1
 areaIdx 0 serviceFreq 0.0625 thresholdVal 0.75 noBins 5
 # Road layout and distances between bin locations (in minutes)
 roadsLayout
- 0  3 -1 -1 -1  4 
- 3  0  5 -1 -1 -1
--1 -1  0  2 -1 -1
--1 -1 -1  0  2  2
--1  1 -1 -1  0 -1
- 4 -1 -1  2  4  0
+0 3 -1 -1 -1 4
+3 0 5 -1 -1 -1
+-1 -1 0 2 -1 -1
+-1 -1 -1 0 2 2
+-1 1 -1 -1 0 -1
+4 -1 -1 2 4 0
 # Simulation duration (hours)
-stopTime 36.0
+stopTime 30.0
 # Warm-up time (hours) allowed before collecting statistics
 warmUpTime 12.0
