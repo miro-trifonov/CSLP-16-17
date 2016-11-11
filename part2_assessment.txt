@@ -1,7 +1,7 @@
 ﻿1. A README file should be submitted, explaining your code structure; TODO
-2. Valid compile.sh and simulate.sh scripts must be submitted; IN PROGRESS
+2. Valid compile.sh and simulate.sh scripts must be submitted; YES
 3. The submitted program compiles without errors and warnings; OBV
-4. The program displays usage information if no input files are given; TODO
+4. The program displays usage information if no input files are given; YES
 5. The program correctly performs parsing and validation of the input, including YES
 (a) checking for valid/invalid tokens; YES
 (b) verifying formats and magnitudes of parameters’ values; YES
@@ -11,5 +11,7 @@
 6. Your code must generate, schedule, and execute wasted disposal events correctly; YES
 7. Your program must produce valid and correctly formatted output; YES
 8. A suite of test input scripts must be submitted, demonstrating the level of testing you performed for Part 2; IN PROGRESS
-9. Your code should be appropriately commented; IN PROGRESS
+9. Your code should be appropriately commented; YES
 10. Your code must exhibit an easy to follow structure and re-usability. YES
+
+experiment : rate, shape

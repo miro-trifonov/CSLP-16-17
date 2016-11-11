@@ -49,6 +49,9 @@ def start_garbage_collection(truck):
 # Creating and running the simulation
 file_name = sys.argv[1]
 parameters = my_parser.parse_file(file_name)
+if not parameters:
+    print "Error"
+    sys.exit()
 areas = createObjects.create_areas(parameters)
 event_queue = Queue.PriorityQueue()
 report = False
