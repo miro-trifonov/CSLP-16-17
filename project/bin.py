@@ -3,6 +3,7 @@ class Bin:
         self.max_volume = max_volume
         self.weight, self.volume = 0, 0
         self.id = "{}.{}".format(area_id, bin_id)
+        self.short_id = bin_id
         self.overflow = False
         self.full = 0
 

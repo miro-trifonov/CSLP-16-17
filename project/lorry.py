@@ -6,15 +6,18 @@ class Lorry:
         self.load, self.volume = 0, 0
         self.path = []
         self.travelling = False
+        self.late = False
+        self.number_of_journeys = 0
 
     def schedule_task(self):
         self.travelling = True
 
     def empty_bin(self, bin_to_empty):
-        if self.load + bin_to_empty.load < self.max_load and self.volume + bin_to_empty.volume < self.max_volume:
-            self.load += bin_to_empty.load
+        if self.load + bin_to_empty.weight <= self.max_load and self.volume + bin_to_empty.volume <= self.max_volume:
+            self.load += bin_to_empty.weight
             self.volume += bin_to_empty.volume / 2
             bin_to_empty.empty()
+            self.path.pop(0)
             return True
         else:
             print "Lorry full"

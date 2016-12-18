@@ -27,7 +27,7 @@ class Area:
         self.threshold = threshold
         self.lorry = lorry
         self.bins = {}
-        for i in range(1, int(bins)):
+        for i in range(1, int(bins + 1)):
             a_bin = bin.Bin(bin_volume, self.area_id, i)
             self.bins[i] = a_bin
         self.distance_map = convert_road_matrix_to_distance_dict(route_map)

@@ -41,8 +41,8 @@ def schedule_first_events():
     event_queue.put((parameters.get('warmUpTime'), (0, 'report')))
 
 
-def make_path(area, bin_numbers):
-    distance_map = area.distance_map
+def make_path(this_area, bin_numbers):
+    distance_map = this_area.distance_map
     path = []
     current_position = 0
     while bin_numbers:
@@ -57,22 +57,26 @@ def make_path(area, bin_numbers):
         bin_numbers.remove(closest_bin)
         path.append((closest_bin, smallest_distance))
         current_position = closest_bin
-    path.append((0, distance_map[current_position][0]))
+    # path.append((0, distance_map[current_position][0]))
     return path
 
 
 # garbage collection function
-def start_garbage_collection(area):
+def start_garbage_collection(area, time):
+    lorry = area.lorry
+    if lorry.travelling:
+        lorry.late = True
+        # TODO may need tp change return statement
+        return False
     bins = area.bins
     bins_to_be_emptied = []
     for bin_id in bins:
         if bins[bin_id].full > area.threshold:
             bins_to_be_emptied.append(bin_id)
-    path = make_path(area, bins_to_be_emptied)
-    # add path to lorry
-    # start lorry travel
-    # schedule first disposal event
-
+    lorry.path = make_path(area, bins_to_be_emptied)
+    lorry.travelling = True
+    time_to_next_bin = lorry.path[0][1] / 60.0
+    event_queue.put((time + time_to_next_bin, (lorry, 'empty_bin')))
 
 # Creating and running the simulation
 file_name = sys.argv[1]
@@ -103,7 +107,8 @@ while 1 and not event_queue.empty():
         event_type = event[1][1]
         event_object = event[1][0]
         if event_type == 'startGarbageCollection':
-            start_garbage_collection(event_object)
+            area = event_object
+            start_garbage_collection(area, time_now)
         elif event_type == 'disposeTrash':
             this_bin = event_object
             bag_weight = random.random() * (
@@ -116,15 +121,30 @@ while 1 and not event_queue.empty():
                 "{} -> bag weighting {:.2f} kg disposed of at bin {}".format(time_dhms, bag_weight, this_bin.id))
             output.append(
                 "{} -> load of bin {} became {:.2f} kg and contents volume {:.2f} m^3".format(time_dhms, this_bin.id,
-                                                                                              this_bin.weight,
-                                                                                              this_bin.volume))
+                this_bin.weight, this_bin.volume))
             if this_bin.overflow:
                 output.append("{} -> bin {} overflowed".format(time_dhms, this_bin.id))
 
         elif event_type == 'report':
             report = True
+        elif event_type == 'empty_bin':
+            lorry = event_object
+            this_bin = areas[lorry.id].bins[lorry.path[0][0]]
+            is_last_bin = len(lorry.path) == 1
+            emptied = lorry.empty_bin(this_bin)
+            if emptied and not is_last_bin:
+                time_to_next_bin = lorry.path[0][1] / 60.0
+                event_queue.put((time_now + time_to_next_bin, (lorry, 'empty_bin')))
+            else:
+                time_to_depo = areas[lorry.id].distance_map[this_bin.short_id][0]
+                event_queue.put((time_now + time_to_depo, (lorry, 'return_to_depo')))
+        elif event_type == 'return_to_depo':
+            lorry = event_object
+            lorry.empty()
+            if lorry.path:
+                # get that thrash
         else:
-            print "error"
+            print "error on: " + event_type
 output_file = open('output.txt', 'w')
 for line in output:
     print>> output_file, line
