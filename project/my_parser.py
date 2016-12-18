@@ -47,7 +47,7 @@ def parse_file(filename):
                 sys.exit()
         elif road_layout_input and remaining_road_matrix_len != 0:
             new_list = arguments.get('roadsLayout {}'.format(area_id), [])
-            for i in range(1, tokens.__len__()):
+            for i in range(0, tokens.__len__()):
                 tokens[i] = num(tokens[i], 'roadsLayout', 'int')
                 if tokens[i] is False:
                     print "Error \"not an integer\" possibly caused by missing row in road layout matrix"

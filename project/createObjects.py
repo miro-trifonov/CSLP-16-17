@@ -11,6 +11,6 @@ def create_areas(parameters):
         bin_volume = parameters.get('binVolume')
         freq, thresh, bins, road_map = parameters.get('serviceFreq {}'.format(i)), parameters.get(
             'thresholdVal {}'.format(i)), parameters.get('noBins {}'.format(i)), parameters.get(
-            'roadsLayout {}'.format(i)),
+            'roadsLayout {}'.format(i))
         areas[i] = service_area.Area(i, freq, thresh, bins, bin_volume, truck, road_map)
     return areas

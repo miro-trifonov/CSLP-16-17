@@ -13,8 +13,8 @@ import my_parser
 # If ran with no arguments, usage information will be printed
 
 if len(sys.argv) == 1:
-    file = open("usageInformation.txt", 'r')
-    print file.read()
+    help_file = open("usageInformation.txt", 'r')
+    print help_file.read()
     sys.exit(0)
 
 
@@ -32,7 +32,7 @@ def schedule_first_events():
     for i in range(0, areas.__len__()):
         area = areas[i]
         next_service_time = area.service_frequency
-        event_queue.put((next_service_time, (area, 'collectGarbage')))
+        event_queue.put((next_service_time, (area, 'startGarbageCollection')))
         for i in area.bins:
             thrashbin = area.bins.get(i)
             next_trash_disposal_time = next_thrash_disposal(0)
@@ -41,9 +41,37 @@ def schedule_first_events():
     event_queue.put((parameters.get('warmUpTime'), (0, 'report')))
 
 
-# garbage collection function TODO
-def start_garbage_collection(truck):
-    return True
+def make_path(area, bin_numbers):
+    distance_map = area.distance_map
+    path = []
+    current_position = 0
+    while bin_numbers:
+        # closest_dist = min(distance_map[current_position].values)
+        # bin_number = [key for key, value in dict.iteritems() if value == min_value]
+        bin_dist = {}
+        for bin_number in bin_numbers:
+            current_distance = distance_map[current_position][bin_number]
+            bin_dist[current_distance] = bin_number
+        smallest_distance = min(bin_dist.keys())
+        closest_bin = bin_dist[smallest_distance]
+        bin_numbers.remove(closest_bin)
+        path.append((closest_bin, smallest_distance))
+        current_position = closest_bin
+    path.append((0, distance_map[current_position][0]))
+    return path
+
+
+# garbage collection function
+def start_garbage_collection(area):
+    bins = area.bins
+    bins_to_be_emptied = []
+    for bin_id in bins:
+        if bins[bin_id].full > area.threshold:
+            bins_to_be_emptied.append(bin_id)
+    path = make_path(area, bins_to_be_emptied)
+    # add path to lorry
+    # start lorry travel
+    # schedule first disposal event
 
 
 # Creating and running the simulation
@@ -74,7 +102,7 @@ while 1 and not event_queue.empty():
     else:
         event_type = event[1][1]
         event_object = event[1][0]
-        if event_type == 'collectGarbage':
+        if event_type == 'startGarbageCollection':
             start_garbage_collection(event_object)
         elif event_type == 'disposeTrash':
             this_bin = event_object

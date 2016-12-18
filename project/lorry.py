@@ -4,6 +4,7 @@ class Lorry:
         self.max_load = max_load
         self.id = lorry_id
         self.load, self.volume = 0, 0
+        self.path = []
         self.travelling = False
 
     def schedule_task(self):
