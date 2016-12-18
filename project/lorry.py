@@ -7,7 +7,7 @@ class Lorry:
         self.path = []
         self.travelling = False
         self.late = False
-        self.number_of_journeys = 0
+        self.number_of_journeys = 1
 
     def schedule_task(self):
         self.travelling = True
@@ -26,4 +26,8 @@ class Lorry:
     def return_lorry(self):
         self.volume = 0
         self.load = 0
-        self.travelling = False
+        if not self.path:
+            self.travelling = False
+            self.number_of_journeys = 0
+        else:
+            self.number_of_journeys += 1

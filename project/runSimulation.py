@@ -66,7 +66,6 @@ def start_garbage_collection(area, time):
     lorry = area.lorry
     if lorry.travelling:
         lorry.late = True
-        # TODO may need tp change return statement
         return False
     bins = area.bins
     bins_to_be_emptied = []
@@ -77,6 +76,8 @@ def start_garbage_collection(area, time):
     lorry.travelling = True
     time_to_next_bin = lorry.path[0][1] / 60.0
     event_queue.put((time + time_to_next_bin, (lorry, 'empty_bin')))
+    event_queue.put((time + area.service_frequency, (area, 'startGarbageCollection')))
+
 
 # Creating and running the simulation
 file_name = sys.argv[1]
@@ -88,6 +89,8 @@ areas = createObjects.create_areas(parameters)
 event_queue = Queue.PriorityQueue()
 report = False
 bag_volume = parameters.get('bagVolume')
+service_time = parameters.get('binServiceTime') / 3600.0
+empty_lorry_time = 5 * service_time
 output = []
 
 schedule_first_events()
@@ -106,6 +109,7 @@ while 1 and not event_queue.empty():
     else:
         event_type = event[1][1]
         event_object = event[1][0]
+        print str(time_dhms) + " " + event_type
         if event_type == 'startGarbageCollection':
             area = event_object
             start_garbage_collection(area, time_now)
@@ -134,15 +138,20 @@ while 1 and not event_queue.empty():
             emptied = lorry.empty_bin(this_bin)
             if emptied and not is_last_bin:
                 time_to_next_bin = lorry.path[0][1] / 60.0
-                event_queue.put((time_now + time_to_next_bin, (lorry, 'empty_bin')))
+                event_queue.put((time_now + time_to_next_bin + service_time, (lorry, 'empty_bin')))
             else:
-                time_to_depo = areas[lorry.id].distance_map[this_bin.short_id][0]
+                time_to_depo = areas[lorry.id].distance_map[this_bin.short_id][0] / 60.0
                 event_queue.put((time_now + time_to_depo, (lorry, 'return_to_depo')))
         elif event_type == 'return_to_depo':
             lorry = event_object
-            lorry.empty()
+            lorry.return_lorry()
             if lorry.path:
-                # get that thrash
+                print "Lorry overflow"
+                time_to_next_bin = lorry.path[0][1] / 60.0
+                event_queue.put((time_now + time_to_next_bin + empty_lorry_time, (lorry, 'empty_bin')))
+            elif lorry.late:
+                print "Service finished, new immediately"
+                event_queue.put((time_now + empty_lorry_time, (areas[lorry.id], 'startGarbageCollection')))
         else:
             print "error on: " + event_type
 output_file = open('output.txt', 'w')

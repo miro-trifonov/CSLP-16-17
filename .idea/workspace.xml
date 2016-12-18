@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="10f874a1-3ded-4a79-8e80-e9b9f1e2f150" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input.txt" afterPath="$PROJECT_DIR$/input.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output.txt" afterPath="$PROJECT_DIR$/output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/bin.py" afterPath="$PROJECT_DIR$/project/bin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/lorry.py" afterPath="$PROJECT_DIR$/project/lorry.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/runSimulation.py" afterPath="$PROJECT_DIR$/project/runSimulation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/service_area.py" afterPath="$PROJECT_DIR$/project/service_area.py" />
     </list>
     <ignored path="cslp-16-17.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,8 +44,8 @@
       <file leaf-file-name="lorry.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/lorry.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+            <state relative-caret-position="153">
+              <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -55,8 +54,8 @@
       <file leaf-file-name="service_area.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/service_area.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+            <state relative-caret-position="425">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -79,8 +78,8 @@
       <file leaf-file-name="runSimulation.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project/runSimulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="746">
-              <caret line="145" column="13" lean-forward="true" selection-start-line="145" selection-start-column="13" selection-end-line="145" selection-end-column="13" />
+            <state relative-caret-position="238">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -122,6 +121,7 @@
       <find>'A'</find>
       <find>travel</find>
       <find>service</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace>1</replace>
@@ -142,10 +142,10 @@
         <option value="$PROJECT_DIR$/project/my_parser.py" />
         <option value="$PROJECT_DIR$/project/createObjects.py" />
         <option value="$PROJECT_DIR$/project/dijkstra.py" />
-        <option value="$PROJECT_DIR$/project/lorry.py" />
         <option value="$PROJECT_DIR$/project/bin.py" />
-        <option value="$PROJECT_DIR$/project/service_area.py" />
+        <option value="$PROJECT_DIR$/project/lorry.py" />
         <option value="$PROJECT_DIR$/project/runSimulation.py" />
+        <option value="$PROJECT_DIR$/project/service_area.py" />
       </list>
     </option>
   </component>
@@ -463,7 +463,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1272" height="1057" extended-state="0" />
+    <frame x="-7" y="0" width="1272" height="1057" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18073249" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -881,14 +881,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/lorry.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/createObjects.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -907,10 +899,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/project/lorry.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/project/service_area.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -919,8 +919,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project/runSimulation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="145" column="13" lean-forward="true" selection-start-line="145" selection-start-column="13" selection-end-line="145" selection-end-column="13" />
+        <state relative-caret-position="238">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
