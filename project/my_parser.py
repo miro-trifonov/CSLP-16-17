@@ -5,7 +5,6 @@ import sys
 # provided it has rightly formatted input and prints error otherwise
 # validate_input -> called automatically by parse_file this function checks if all needed arguments are given
 # and displays warnings for some types of unrealistic input
-# num -> makes sure that given argument is int or a float, as specified by num_type
 
 # TODO add check for correct row length in matrix length
 
@@ -33,7 +32,8 @@ def parse_file(filename):
             continue
         elif tokens[0] == 'serviceFreq' and tokens[1] == 'experiment':
             continue  # Feature not implemented yet
-        elif (tokens[0] == 'disposalDistrShape' or tokens[0] == 'disposalDistrRate') and tokens[1] == 'experiment' and tokens[2]:
+        elif (tokens[0] == 'disposalDistrShape' or tokens[0] == 'disposalDistrRate') and tokens[1] == 'experiment' and \
+                tokens[2]:
             tokens[1] = tokens[2]
             experiment = tokens[0]
 
@@ -48,8 +48,10 @@ def parse_file(filename):
         elif road_layout_input and remaining_road_matrix_len != 0:
             new_list = arguments.get('roadsLayout {}'.format(area_id), [])
             for i in range(0, tokens.__len__()):
-                tokens[i] = num(tokens[i], 'roadsLayout', 'int')
+                tokens[i] = matrix_entry(tokens[i], 'roadsLayout', False)
+                print tokens[i]
                 if tokens[i] is False:
+                    # TODO change error message
                     print "Error \"not an integer\" possibly caused by missing row in road layout matrix"
                     is_valid = False
                     sys.exit()
@@ -61,7 +63,7 @@ def parse_file(filename):
         elif tokens[0] in expected_global_arguments_int and len(tokens) > 1:
             if tokens in arguments.keys():
                 print "Argument {} given two times".format(tokens[0])
-            key, value = tokens[0], num(tokens[1], tokens[0], 'int')
+            key, value = tokens[0], to_int(tokens[1], tokens[0])
             if value is False:
                 is_valid = False
                 sys.exit()
@@ -72,7 +74,7 @@ def parse_file(filename):
         elif tokens[0] in expected_global_arguments_float and len(tokens) > 1:
             if tokens in arguments.keys():
                 print "Argument {} given two times".format(tokens[0])
-            key, value = tokens[0], num(tokens[1], tokens[0], 'float')
+            key, value = tokens[0], to_float(tokens[1], tokens[0])
             if value is False:
                 is_valid = False
                 sys.exit()
@@ -84,8 +86,8 @@ def parse_file(filename):
             area_id = tokens[1]
             area_ids.append(area_id)
             for arg in expected_area_arguments:
-                arguments["{} {}".format(arg, area_id)] = num(tokens[tokens.index(arg) + 1],
-                                                              "{} {}".format(arg, area_id), 'float')
+                arguments["{} {}".format(arg, area_id)] = to_float(tokens[tokens.index(arg) + 1],
+                                                                   "{} {}".format(arg, area_id))
             road_layout_input = 'expect_arg'
             remaining_road_matrix_len = int(arguments.get('noBins {}'.format(area_id))) + 1
         else:
@@ -138,18 +140,35 @@ def validate_input(arguments, expect_road_input, remaining_global_arguments, are
     return True
 
 
-def num(s, key, num_type):
-    if num_type is 'int':
-        try:
-            return int(s)
-        except ValueError:
-            print "Error: \"{}\" is not an integer in  {}".format(s, key)
-            return False
+def to_int(s, key):
     try:
         return int(s)
     except ValueError:
-        try:
-            return float(s)
-        except ValueError:
-            print "Error: \"{}\" is not a number in  {}".format(s, key)
-            return False
+        print "Error: \"{}\" is not an integer in  {}".format(s, key)
+        return False
+
+
+def to_float(s, key):
+    try:
+        return float(s)
+    except ValueError:
+        print "Error: \"{}\" is not a number in  {}".format(s, key)
+        return False
+
+
+def matrix_entry(s, key, is_middle):
+    try:
+        s = int(s)
+        if is_middle:
+            if s == 0:
+                return s
+            else:
+                sys.exit("Road layout value (x:x) must be 0")
+        else:
+            # TODO
+            if s >= 0 or s == -1:
+                return s
+            else:
+                return False
+    except:
+        print "Error: \"{}\" is not a number in  {}".format(s, key)

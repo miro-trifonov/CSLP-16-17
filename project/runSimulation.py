@@ -117,7 +117,7 @@ while 1 and not event_queue.empty():
             bag_weight = random.random() * (
                 parameters.get('bagWeightMax') - parameters.get('bagWeightMin')) + parameters.get('bagWeightMin')
             bag = (bag_volume, bag_weight)
-            this_bin.add_bag(bag)
+            overflow = this_bin.add_bag(bag)
             next_disposal_time = next_thrash_disposal(time_now)
             event_queue.put((next_disposal_time, (this_bin, 'disposeTrash')))
             output_file.write(
@@ -126,7 +126,7 @@ while 1 and not event_queue.empty():
                 "{} -> load of bin {} became {:.2f} kg and contents volume {:.2f} m^3\n".format(time_dhms, this_bin.id,
                                                                                                 this_bin.weight,
                                                                                                 this_bin.volume))
-            if this_bin.overflow:
+            if overflow:
                 output_file.write("{} -> bin {} overflowed\n".format(time_dhms, this_bin.id))
 
         elif event_type == 'report':

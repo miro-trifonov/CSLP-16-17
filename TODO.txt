@@ -1,2 +1,7 @@
-TODO:
-	add leave location event
+Bombs in airports (per area/ overall):
+	avg trip diration:
+	trips per schedule:
+	trip efficiency (weight collected per unit of time):
+	avg volume collected (per trip/per schedule/per unit of time??):
+	percantage of overflowed bins (compute on each service schedule):
+
