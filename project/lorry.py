@@ -7,7 +7,8 @@ class Lorry:
         self.path = []
         self.travelling = False
         self.late = False
-        self.number_of_journeys = 1
+        self.number_of_journeys = 0
+        self.lorry_misc = {} # This is where statistics will be collected for each individual lorry
 
     def schedule_task(self):
         self.travelling = True

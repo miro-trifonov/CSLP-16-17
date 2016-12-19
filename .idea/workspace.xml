@@ -5,8 +5,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/output.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TODO.txt" afterPath="$PROJECT_DIR$/TODO.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/bin.py" afterPath="$PROJECT_DIR$/project/bin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/my_parser.py" afterPath="$PROJECT_DIR$/project/my_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/lorry.py" afterPath="$PROJECT_DIR$/project/lorry.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/runSimulation.py" afterPath="$PROJECT_DIR$/project/runSimulation.py" />
     </list>
     <ignored path="cslp-16-17.iws" />
@@ -42,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lorry.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="lorry.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project/lorry.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+            <state relative-caret-position="170">
+              <caret line="10" column="99" lean-forward="false" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="99" />
               <folding />
             </state>
           </provider>
@@ -79,8 +78,8 @@
       <file leaf-file-name="runSimulation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/runSimulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="128" column="23" lean-forward="false" selection-start-line="128" selection-start-column="23" selection-end-line="128" selection-end-column="23" />
+            <state relative-caret-position="1190">
+              <caret line="70" column="27" lean-forward="true" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -91,18 +90,18 @@
       <file leaf-file-name="dijkstra.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/dijkstra.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state relative-caret-position="731">
+              <caret line="43" column="28" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_parser.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="my_parser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/my_parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="695">
-              <caret line="167" column="14" lean-forward="false" selection-start-line="167" selection-start-column="14" selection-end-line="167" selection-end-column="14" />
+            <state relative-caret-position="2669">
+              <caret line="157" column="0" lean-forward="true" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -126,6 +125,7 @@
       <find>thresh</find>
       <find>overflow</find>
       <find>num</find>
+      <find>matrix_e</find>
     </findStrings>
     <replaceStrings>
       <replace>1</replace>
@@ -144,12 +144,12 @@
         <option value="$PROJECT_DIR$/project/dijkstra_algorithm.py" />
         <option value="$PROJECT_DIR$/project/test.py" />
         <option value="$PROJECT_DIR$/project/dijkstra.py" />
-        <option value="$PROJECT_DIR$/project/lorry.py" />
         <option value="$PROJECT_DIR$/project/createObjects.py" />
         <option value="$PROJECT_DIR$/project/service_area.py" />
         <option value="$PROJECT_DIR$/project/bin.py" />
-        <option value="$PROJECT_DIR$/project/runSimulation.py" />
         <option value="$PROJECT_DIR$/project/my_parser.py" />
+        <option value="$PROJECT_DIR$/project/runSimulation.py" />
+        <option value="$PROJECT_DIR$/project/lorry.py" />
       </list>
     </option>
   </component>
@@ -870,22 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/dijkstra.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/lorry.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/bin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -904,6 +888,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/project/my_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2669">
+          <caret line="157" column="0" lean-forward="true" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/dijkstra.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="28" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/runSimulation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="27" lean-forward="true" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/project/service_area.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -914,20 +924,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/runSimulation.py">
+    <entry file="file://$PROJECT_DIR$/project/lorry.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="128" column="23" lean-forward="false" selection-start-line="128" selection-start-column="23" selection-end-line="128" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/my_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="167" column="14" lean-forward="false" selection-start-line="167" selection-start-column="14" selection-end-line="167" selection-end-column="14" />
+        <state relative-caret-position="170">
+          <caret line="10" column="99" lean-forward="false" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="99" />
           <folding />
         </state>
       </provider>

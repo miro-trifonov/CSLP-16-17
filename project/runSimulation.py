@@ -128,10 +128,9 @@ while 1 and not event_queue.empty():
                                                                                                 this_bin.volume))
             if overflow:
                 output_file.write("{} -> bin {} overflowed\n".format(time_dhms, this_bin.id))
-
         elif event_type == 'report':
             report = True
-        elif event_type == 'empty_bin':  # TODO consider moving actual bin emptying to other event
+        elif event_type == 'empty_bin':
             lorry = event_object
             this_bin = areas[lorry.id].bins[lorry.path[0][0]]
             is_last_bin = len(lorry.path) == 1
