@@ -24,11 +24,10 @@ class Area:
     def __init__(self, area_id, service_frequency, threshold, bins, bin_volume, lorry, route_map):
         self.area_id = area_id
         self.service_frequency = 1.0 / service_frequency
-        self.threshold = threshold
         self.lorry = lorry
         self.bins = {}
         for i in range(1, int(bins + 1)):
-            a_bin = bin.Bin(bin_volume, self.area_id, i)
+            a_bin = bin.Bin(bin_volume, self.area_id, i, threshold)
             self.bins[i] = a_bin
         self.distance_map = convert_road_matrix_to_distance_dict(route_map)
 

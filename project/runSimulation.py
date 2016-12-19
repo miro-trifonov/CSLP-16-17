@@ -70,7 +70,7 @@ def start_garbage_collection(area, time):
     bins = area.bins
     bins_to_be_emptied = []
     for bin_id in bins:
-        if bins[bin_id].full > area.threshold:
+        if bins[bin_id].to_be_emptied:
             bins_to_be_emptied.append(bin_id)
     lorry.path = make_path(area, bins_to_be_emptied)
     lorry.travelling = True
@@ -91,8 +91,7 @@ report = False
 bag_volume = parameters.get('bagVolume')
 service_time = parameters.get('binServiceTime') / 3600.0
 empty_lorry_time = 5 * service_time
-output = []
-
+output_file = open('output.txt', 'w')
 schedule_first_events()
 
 while 1 and not event_queue.empty():
@@ -118,45 +117,64 @@ while 1 and not event_queue.empty():
             bag_weight = random.random() * (
                 parameters.get('bagWeightMax') - parameters.get('bagWeightMin')) + parameters.get('bagWeightMin')
             bag = (bag_volume, bag_weight)
-            overflown = this_bin.add_bag(bag)
+            this_bin.add_bag(bag)
             next_disposal_time = next_thrash_disposal(time_now)
             event_queue.put((next_disposal_time, (this_bin, 'disposeTrash')))
-            output.append(
-                "{} -> bag weighting {:.2f} kg disposed of at bin {}".format(time_dhms, bag_weight, this_bin.id))
-            output.append(
-                "{} -> load of bin {} became {:.2f} kg and contents volume {:.2f} m^3".format(time_dhms, this_bin.id,
-                this_bin.weight, this_bin.volume))
+            output_file.write(
+                "{} -> bag weighting {:.2f} kg disposed of at bin {}\n".format(time_dhms, bag_weight, this_bin.id))
+            output_file.write(
+                "{} -> load of bin {} became {:.2f} kg and contents volume {:.2f} m^3\n".format(time_dhms, this_bin.id,
+                                                                                                this_bin.weight,
+                                                                                                this_bin.volume))
             if this_bin.overflow:
-                output.append("{} -> bin {} overflowed".format(time_dhms, this_bin.id))
+                output_file.write("{} -> bin {} overflowed\n".format(time_dhms, this_bin.id))
 
         elif event_type == 'report':
             report = True
-        elif event_type == 'empty_bin':
+        elif event_type == 'empty_bin':  # TODO consider moving actual bin emptying to other event
             lorry = event_object
             this_bin = areas[lorry.id].bins[lorry.path[0][0]]
             is_last_bin = len(lorry.path) == 1
             emptied = lorry.empty_bin(this_bin)
+            output_file.write(
+                "{} -> lorry {} arrived at location {}\n".format(time_dhms, lorry.id, this_bin.id))
             if emptied and not is_last_bin:
                 time_to_next_bin = lorry.path[0][1] / 60.0
+                event_queue.put((time_now + service_time, ((lorry, this_bin.id, emptied), 'leave_location')))
                 event_queue.put((time_now + time_to_next_bin + service_time, (lorry, 'empty_bin')))
             else:
+                delay = service_time * emptied
                 time_to_depo = areas[lorry.id].distance_map[this_bin.short_id][0] / 60.0
-                event_queue.put((time_now + time_to_depo, (lorry, 'return_to_depo')))
+                event_queue.put((time_now + delay, ((lorry, this_bin.id, emptied), 'leave_location')))
+                event_queue.put((time_now + time_to_depo + delay, (lorry, 'return_to_depo')))
         elif event_type == 'return_to_depo':
             lorry = event_object
             lorry.return_lorry()
+            output_file.write(
+                "{} -> load of lorry {} became {:.2f} kg and contents volume {:.2f} m^3\n".format(time_dhms, lorry.id,
+                                                                                                  0, 0))
             if lorry.path:
-                print "Lorry overflow"
                 time_to_next_bin = lorry.path[0][1] / 60.0
                 event_queue.put((time_now + time_to_next_bin + empty_lorry_time, (lorry, 'empty_bin')))
             elif lorry.late:
-                print "Service finished, new immediately"
                 event_queue.put((time_now + empty_lorry_time, (areas[lorry.id], 'startGarbageCollection')))
+        elif event_type == "leave_location":
+            lorry = event_object[0]
+            bin_id = event_object[1]
+            lorry_emptied_bin = event_object[2]
+            if lorry_emptied_bin:
+                output_file.write(
+                    "{} -> load of bin {} became {:.2f} kg and contents volume {:.2f} m^3\n".format(time_dhms, bin_id,
+                                                                                                    0, 0))
+                output_file.write(
+                    "{} -> load of lorry {} became {:.2f} kg and contents volume {:.2f} m^3\n".format(time_dhms,
+                                                                                                      lorry.id,
+                                                                                                      lorry.load,
+                                                                                                      lorry.volume))
+            output_file.write("{} -> lorry {} left location {}\n".format(time_dhms, event_object[0], event_object[1]))
         else:
             print "error on: " + event_type
-output_file = open('output.txt', 'w')
-for line in output:
-    print>> output_file, line
+
 output_file.close()
 print 'success'
 sys.exit(0)

@@ -1,11 +1,14 @@
 class Bin:
-    def __init__(self, max_volume, area_id, bin_id):
+    def __init__(self, max_volume, area_id, bin_id, threshold):
         self.max_volume = max_volume
         self.weight, self.volume = 0, 0
         self.id = "{}.{}".format(area_id, bin_id)
         self.short_id = bin_id
         self.overflow = False
         self.full = 0
+        self.threshold = threshold
+        self.to_be_emptied = False
+        # TODO add check for occupancy threshold
 
     def add_bag(self, (bag_volume, bag_weight)):
         if self.overflow:
@@ -17,6 +20,8 @@ class Bin:
             self.full = 100
         else:
             self.full = self.volume / self.max_volume * 100
+        if self.full > self.threshold:
+            self.to_be_emptied = True
         return self.full
 
     def empty(self):
