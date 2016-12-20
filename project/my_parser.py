@@ -1,10 +1,10 @@
 import sys
 
 
-# parse_file -> given a filename as an input, parses a bin collection file it into a dictionary,
-# provided it has rightly formatted input and prints error otherwise
-# validate_input -> called automatically by parse_file this function checks if all needed arguments are given
-# and displays warnings for some types of unrealistic input
+"""parse_file -> given a filename as an input, parses a bin collection file it into a dictionary,
+provided it has rightly formatted input and prints error otherwise
+validate_input -> called automatically by parse_file this function checks if all needed arguments are given
+and displays warnings for some types of unrealistic input"""
 
 # TODO add check for correct row length in matrix length
 
@@ -49,7 +49,6 @@ def parse_file(filename):
             new_list = arguments.get('roadsLayout {}'.format(area_id), [])
             for i in range(0, tokens.__len__()):
                 tokens[i] = matrix_entry(tokens[i], 'roadsLayout', False)
-                print tokens[i]
                 if tokens[i] is False:
                     # TODO change error message
                     print "Error \"not an integer\" possibly caused by missing row in road layout matrix"

@@ -1,7 +1,9 @@
 from collections import defaultdict, deque
 
+""" Dijkstra algorithm for graph traversal. "dijkstra" function returns for a point "a" the distance to all other points
+    in a directed graph. Code taken from https://gist.github.com/mdsrosa/c71339cb23bc51e711d8,
+    with slight modifications """
 
-# Code taken from https://gist.github.com/mdsrosa/c71339cb23bc51e711d8, with slight modifications
 
 class Graph(object):
     def __init__(self):
@@ -19,7 +21,6 @@ class Graph(object):
 
 def dijkstra(graph, initial):
     visited = {initial: 0}
-    # path = {}
 
     nodes = set(graph.nodes)
 
@@ -46,41 +47,5 @@ def dijkstra(graph, initial):
                 continue
             if edge not in visited or weight < visited[edge]:
                 visited[edge] = weight
-                # path[edge] = min_node
 
     return visited
-
-
-def shortest_path(graph, origin, destination):
-    visited, paths = dijkstra(graph, origin)
-    full_path = deque()
-    _destination = paths[destination]
-
-    while _destination != origin:
-        full_path.appendleft(_destination)
-        _destination = paths[_destination]
-
-    full_path.appendleft(origin)
-    full_path.append(destination)
-
-    return visited[destination], list(full_path)
-
-#
-# if __name__ == '__main__':
-#     graph = Graph()
-#
-#     for node in ['A', 'B', 'C', 'D', 'E', 'F', 'G']:
-#         graph.add_node(node)
-#
-#     graph.add_edge('A', 'B', 10)
-#     graph.add_edge('A', 'C', 20)
-#     graph.add_edge('A', 'D', -1)
-#     graph.add_edge('B', 'D', 15)
-#     graph.add_edge('C', 'D', 30)
-#     graph.add_edge('B', 'E', 50)
-#     graph.add_edge('D', 'E', 30)
-#     graph.add_edge('E', 'F', 5)
-#     graph.add_edge('F', 'G', 2)
-#
-#     print dijkstra(graph, 'A')
-    # print(shortest_path(graph, 'A', 'D'))  # output: (25, ['A', 'B', 'D'])

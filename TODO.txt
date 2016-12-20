@@ -1,7 +1,4 @@
 TODO:
-	Blow up airport:
-		Use bombs
-
 	Statistics collection (per area/ overall):
 		avg trip diration:
 		trips per schedule:

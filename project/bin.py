@@ -1,3 +1,5 @@
+""" A simple bin class"""
+
 class Bin:
     def __init__(self, max_volume, area_id, bin_id, threshold):
         self.max_volume = max_volume
@@ -30,3 +32,4 @@ class Bin:
         self.volume = 0
         self.weight = 0
         self.full = 0
+        self.to_be_emptied = False

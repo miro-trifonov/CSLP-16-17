@@ -2,7 +2,8 @@ import lorry
 import service_area
 
 
-# Using the simulation params, creates the necessary service areas, bins and lorries
+""" Using the simulation params, creates the necessary service areas, bins and lorries """
+
 
 def create_areas(parameters):
     areas = {}

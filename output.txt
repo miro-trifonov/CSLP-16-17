@@ -1,347 +1,323 @@
-00:00:13:19 -> bag weighting 5.22 kg disposed of at bin 0.2
-00:00:13:19 -> load of bin 0.2 became 5.22 kg and contents volume 0.05 m^3
-00:00:38:19 -> bag weighting 3.23 kg disposed of at bin 0.4
-00:00:38:19 -> load of bin 0.4 became 3.23 kg and contents volume 0.05 m^3
-00:00:41:37 -> bag weighting 2.50 kg disposed of at bin 0.2
-00:00:41:37 -> load of bin 0.2 became 7.72 kg and contents volume 0.10 m^3
-00:00:48:25 -> bag weighting 2.21 kg disposed of at bin 0.1
-00:00:48:25 -> load of bin 0.1 became 2.21 kg and contents volume 0.05 m^3
-00:01:33:23 -> bag weighting 3.77 kg disposed of at bin 0.1
-00:01:33:23 -> load of bin 0.1 became 5.98 kg and contents volume 0.10 m^3
-00:01:34:55 -> bag weighting 7.58 kg disposed of at bin 0.2
-00:01:34:55 -> load of bin 0.2 became 15.30 kg and contents volume 0.15 m^3
-00:01:43:05 -> bag weighting 4.47 kg disposed of at bin 0.4
-00:01:43:05 -> load of bin 0.4 became 7.70 kg and contents volume 0.10 m^3
-00:01:43:28 -> bag weighting 6.47 kg disposed of at bin 0.3
-00:01:43:28 -> load of bin 0.3 became 6.47 kg and contents volume 0.05 m^3
-00:01:50:16 -> bag weighting 4.41 kg disposed of at bin 0.5
-00:01:50:16 -> load of bin 0.5 became 4.41 kg and contents volume 0.05 m^3
-00:01:52:48 -> bag weighting 5.11 kg disposed of at bin 0.4
-00:01:52:48 -> load of bin 0.4 became 12.81 kg and contents volume 0.15 m^3
-00:02:11:02 -> bag weighting 6.00 kg disposed of at bin 0.4
-00:02:11:02 -> load of bin 0.4 became 18.81 kg and contents volume 0.20 m^3
-00:02:11:11 -> bag weighting 6.12 kg disposed of at bin 0.2
-00:02:11:11 -> load of bin 0.2 became 21.42 kg and contents volume 0.20 m^3
-00:02:21:06 -> bag weighting 2.10 kg disposed of at bin 0.4
-00:02:21:06 -> load of bin 0.4 became 20.92 kg and contents volume 0.25 m^3
-00:02:31:25 -> bag weighting 3.76 kg disposed of at bin 0.5
-00:02:31:25 -> load of bin 0.5 became 8.16 kg and contents volume 0.10 m^3
-00:02:34:09 -> bag weighting 2.90 kg disposed of at bin 0.2
-00:02:34:09 -> load of bin 0.2 became 24.32 kg and contents volume 0.25 m^3
-00:02:35:27 -> bag weighting 3.24 kg disposed of at bin 0.1
-00:02:35:27 -> load of bin 0.1 became 9.21 kg and contents volume 0.15 m^3
-00:02:46:57 -> bag weighting 4.56 kg disposed of at bin 0.3
-00:02:46:57 -> load of bin 0.3 became 11.03 kg and contents volume 0.10 m^3
-00:02:50:12 -> bag weighting 4.61 kg disposed of at bin 0.2
-00:02:50:12 -> load of bin 0.2 became 28.94 kg and contents volume 0.30 m^3
-00:03:32:44 -> bag weighting 7.13 kg disposed of at bin 0.1
-00:03:32:44 -> load of bin 0.1 became 16.35 kg and contents volume 0.20 m^3
-00:03:47:53 -> bag weighting 3.07 kg disposed of at bin 0.4
-00:03:47:53 -> load of bin 0.4 became 23.99 kg and contents volume 0.30 m^3
-00:03:56:55 -> bag weighting 7.73 kg disposed of at bin 0.2
-00:03:56:55 -> load of bin 0.2 became 36.66 kg and contents volume 0.35 m^3
-00:03:58:36 -> bag weighting 5.67 kg disposed of at bin 0.3
-00:03:58:36 -> load of bin 0.3 became 16.70 kg and contents volume 0.15 m^3
-00:04:34:42 -> bag weighting 5.89 kg disposed of at bin 0.4
-00:04:34:42 -> load of bin 0.4 became 29.88 kg and contents volume 0.35 m^3
-00:04:46:38 -> bag weighting 6.30 kg disposed of at bin 0.3
-00:04:46:38 -> load of bin 0.3 became 23.00 kg and contents volume 0.20 m^3
-00:05:11:36 -> bag weighting 5.91 kg disposed of at bin 0.5
-00:05:11:36 -> load of bin 0.5 became 14.08 kg and contents volume 0.15 m^3
-00:05:11:41 -> bag weighting 6.82 kg disposed of at bin 0.3
-00:05:11:41 -> load of bin 0.3 became 29.82 kg and contents volume 0.25 m^3
-00:05:24:30 -> bag weighting 5.80 kg disposed of at bin 0.1
-00:05:24:30 -> load of bin 0.1 became 22.15 kg and contents volume 0.25 m^3
-00:05:33:22 -> bag weighting 5.87 kg disposed of at bin 0.3
-00:05:33:22 -> load of bin 0.3 became 35.69 kg and contents volume 0.30 m^3
-00:05:41:50 -> bag weighting 6.65 kg disposed of at bin 0.5
-00:05:41:50 -> load of bin 0.5 became 20.73 kg and contents volume 0.20 m^3
-00:05:46:26 -> bag weighting 4.22 kg disposed of at bin 0.1
-00:05:46:26 -> load of bin 0.1 became 26.37 kg and contents volume 0.30 m^3
-00:06:01:38 -> bag weighting 2.27 kg disposed of at bin 0.5
-00:06:01:38 -> load of bin 0.5 became 23.00 kg and contents volume 0.25 m^3
-00:06:07:43 -> bag weighting 6.68 kg disposed of at bin 0.4
-00:06:07:43 -> load of bin 0.4 became 36.56 kg and contents volume 0.40 m^3
-00:06:20:10 -> bag weighting 6.38 kg disposed of at bin 0.2
-00:06:20:10 -> load of bin 0.2 became 43.04 kg and contents volume 0.40 m^3
-00:06:23:08 -> bag weighting 3.15 kg disposed of at bin 0.1
-00:06:23:08 -> load of bin 0.1 became 29.52 kg and contents volume 0.35 m^3
-00:06:34:20 -> bag weighting 4.26 kg disposed of at bin 0.5
-00:06:34:20 -> load of bin 0.5 became 27.26 kg and contents volume 0.30 m^3
-00:06:36:41 -> bag weighting 5.30 kg disposed of at bin 0.4
-00:06:36:41 -> load of bin 0.4 became 41.86 kg and contents volume 0.45 m^3
-00:06:38:54 -> bag weighting 7.16 kg disposed of at bin 0.4
-00:06:38:54 -> load of bin 0.4 became 49.03 kg and contents volume 0.50 m^3
-00:07:00:28 -> bag weighting 3.63 kg disposed of at bin 0.3
-00:07:00:28 -> load of bin 0.3 became 39.32 kg and contents volume 0.35 m^3
-00:07:15:38 -> bag weighting 6.65 kg disposed of at bin 0.4
-00:07:15:38 -> load of bin 0.4 became 55.68 kg and contents volume 0.55 m^3
-00:07:32:36 -> bag weighting 7.50 kg disposed of at bin 0.1
-00:07:32:36 -> load of bin 0.1 became 37.02 kg and contents volume 0.40 m^3
-00:07:35:29 -> bag weighting 6.67 kg disposed of at bin 0.4
-00:07:35:29 -> load of bin 0.4 became 62.34 kg and contents volume 0.60 m^3
-00:07:52:26 -> bag weighting 3.95 kg disposed of at bin 0.1
-00:07:52:26 -> load of bin 0.1 became 40.97 kg and contents volume 0.45 m^3
-00:07:54:16 -> bag weighting 6.34 kg disposed of at bin 0.4
-00:07:54:16 -> load of bin 0.4 became 68.68 kg and contents volume 0.65 m^3
-00:07:54:50 -> bag weighting 3.28 kg disposed of at bin 0.3
-00:07:54:50 -> load of bin 0.3 became 42.60 kg and contents volume 0.40 m^3
-00:08:00:59 -> bag weighting 4.31 kg disposed of at bin 0.4
-00:08:00:59 -> load of bin 0.4 became 72.99 kg and contents volume 0.70 m^3
-00:08:13:57 -> bag weighting 6.65 kg disposed of at bin 0.1
-00:08:13:57 -> load of bin 0.1 became 47.62 kg and contents volume 0.50 m^3
-00:08:14:46 -> bag weighting 6.80 kg disposed of at bin 0.3
-00:08:14:46 -> load of bin 0.3 became 49.40 kg and contents volume 0.45 m^3
-00:08:45:49 -> bag weighting 3.39 kg disposed of at bin 0.2
-00:08:45:49 -> load of bin 0.2 became 46.43 kg and contents volume 0.45 m^3
-00:08:51:54 -> bag weighting 6.62 kg disposed of at bin 0.5
-00:08:51:54 -> load of bin 0.5 became 33.88 kg and contents volume 0.35 m^3
-00:09:56:57 -> bag weighting 2.73 kg disposed of at bin 0.3
-00:09:56:57 -> load of bin 0.3 became 52.13 kg and contents volume 0.50 m^3
-00:10:07:22 -> bag weighting 7.26 kg disposed of at bin 0.4
-00:10:07:22 -> load of bin 0.4 became 80.25 kg and contents volume 0.75 m^3
-00:10:07:48 -> bag weighting 6.72 kg disposed of at bin 0.3
-00:10:07:48 -> load of bin 0.3 became 58.85 kg and contents volume 0.55 m^3
-00:10:08:35 -> bag weighting 6.94 kg disposed of at bin 0.1
-00:10:08:35 -> load of bin 0.1 became 54.56 kg and contents volume 0.55 m^3
-00:10:18:52 -> bag weighting 7.11 kg disposed of at bin 0.1
-00:10:18:52 -> load of bin 0.1 became 61.67 kg and contents volume 0.60 m^3
-00:10:19:53 -> bag weighting 6.98 kg disposed of at bin 0.2
-00:10:19:53 -> load of bin 0.2 became 53.41 kg and contents volume 0.50 m^3
-00:10:44:35 -> bag weighting 4.64 kg disposed of at bin 0.5
-00:10:44:35 -> load of bin 0.5 became 38.52 kg and contents volume 0.40 m^3
-00:10:53:08 -> bag weighting 7.62 kg disposed of at bin 0.2
-00:10:53:08 -> load of bin 0.2 became 61.04 kg and contents volume 0.55 m^3
-00:11:02:00 -> bag weighting 7.44 kg disposed of at bin 0.1
-00:11:02:00 -> load of bin 0.1 became 69.11 kg and contents volume 0.65 m^3
-00:11:18:42 -> bag weighting 2.23 kg disposed of at bin 0.2
-00:11:18:42 -> load of bin 0.2 became 63.27 kg and contents volume 0.60 m^3
-00:11:22:37 -> bag weighting 2.62 kg disposed of at bin 0.3
-00:11:22:37 -> load of bin 0.3 became 61.47 kg and contents volume 0.60 m^3
-00:11:23:59 -> bag weighting 4.98 kg disposed of at bin 0.4
-00:11:23:59 -> load of bin 0.4 became 85.22 kg and contents volume 0.80 m^3
-00:11:55:17 -> bag weighting 5.09 kg disposed of at bin 0.1
-00:11:55:17 -> load of bin 0.1 became 74.20 kg and contents volume 0.70 m^3
-00:12:01:55 -> bag weighting 6.33 kg disposed of at bin 0.2
-00:12:01:55 -> load of bin 0.2 became 69.59 kg and contents volume 0.65 m^3
-00:12:03:48 -> bag weighting 7.63 kg disposed of at bin 0.3
-00:12:03:48 -> load of bin 0.3 became 69.11 kg and contents volume 0.65 m^3
-00:12:08:06 -> bag weighting 7.76 kg disposed of at bin 0.4
-00:12:08:06 -> load of bin 0.4 became 92.98 kg and contents volume 0.85 m^3
-00:12:13:27 -> bag weighting 4.82 kg disposed of at bin 0.5
-00:12:13:27 -> load of bin 0.5 became 43.34 kg and contents volume 0.45 m^3
-00:12:20:05 -> bag weighting 6.96 kg disposed of at bin 0.1
-00:12:20:05 -> load of bin 0.1 became 81.17 kg and contents volume 0.75 m^3
-00:12:59:54 -> bag weighting 4.13 kg disposed of at bin 0.2
-00:12:59:54 -> load of bin 0.2 became 73.73 kg and contents volume 0.70 m^3
-00:13:34:54 -> bag weighting 6.08 kg disposed of at bin 0.1
-00:13:34:54 -> load of bin 0.1 became 87.25 kg and contents volume 0.80 m^3
-00:14:00:53 -> bag weighting 5.95 kg disposed of at bin 0.1
-00:14:00:53 -> load of bin 0.1 became 93.20 kg and contents volume 0.85 m^3
-00:14:05:05 -> bag weighting 4.78 kg disposed of at bin 0.4
-00:14:05:05 -> load of bin 0.4 became 97.76 kg and contents volume 0.90 m^3
-00:14:06:51 -> bag weighting 3.72 kg disposed of at bin 0.3
-00:14:06:51 -> load of bin 0.3 became 72.83 kg and contents volume 0.70 m^3
-00:14:21:31 -> bag weighting 5.35 kg disposed of at bin 0.5
-00:14:21:31 -> load of bin 0.5 became 48.69 kg and contents volume 0.50 m^3
-00:14:34:22 -> bag weighting 4.66 kg disposed of at bin 0.4
-00:14:34:22 -> load of bin 0.4 became 102.42 kg and contents volume 0.95 m^3
-00:14:41:09 -> bag weighting 7.93 kg disposed of at bin 0.1
-00:14:41:09 -> load of bin 0.1 became 101.13 kg and contents volume 0.90 m^3
-00:14:44:18 -> bag weighting 6.27 kg disposed of at bin 0.5
-00:14:44:18 -> load of bin 0.5 became 54.96 kg and contents volume 0.55 m^3
-00:15:00:56 -> bag weighting 2.23 kg disposed of at bin 0.2
-00:15:00:56 -> load of bin 0.2 became 75.96 kg and contents volume 0.75 m^3
-00:15:29:03 -> bag weighting 6.93 kg disposed of at bin 0.5
-00:15:29:03 -> load of bin 0.5 became 61.90 kg and contents volume 0.60 m^3
-00:15:31:56 -> bag weighting 5.77 kg disposed of at bin 0.4
-00:15:31:56 -> load of bin 0.4 became 108.19 kg and contents volume 1.00 m^3
-00:15:52:26 -> bag weighting 6.53 kg disposed of at bin 0.1
-00:15:52:26 -> load of bin 0.1 became 107.66 kg and contents volume 0.95 m^3
+00:00:27:06 -> bag weighting 2.65 kg disposed of at bin 0.4
+00:00:27:06 -> load of bin 0.4 became 2.65 kg and contents volume 0.05 m^3
+00:00:34:50 -> bag weighting 2.46 kg disposed of at bin 0.1
+00:00:34:50 -> load of bin 0.1 became 2.46 kg and contents volume 0.05 m^3
+00:00:59:26 -> bag weighting 4.43 kg disposed of at bin 0.2
+00:00:59:26 -> load of bin 0.2 became 4.43 kg and contents volume 0.05 m^3
+00:01:06:56 -> bag weighting 7.00 kg disposed of at bin 0.5
+00:01:06:56 -> load of bin 0.5 became 7.00 kg and contents volume 0.05 m^3
+00:01:10:30 -> bag weighting 7.06 kg disposed of at bin 0.2
+00:01:10:30 -> load of bin 0.2 became 11.48 kg and contents volume 0.10 m^3
+00:01:12:57 -> bag weighting 7.82 kg disposed of at bin 0.1
+00:01:12:57 -> load of bin 0.1 became 10.27 kg and contents volume 0.10 m^3
+00:01:29:19 -> bag weighting 2.26 kg disposed of at bin 0.3
+00:01:29:19 -> load of bin 0.3 became 2.26 kg and contents volume 0.05 m^3
+00:01:46:31 -> bag weighting 7.77 kg disposed of at bin 0.5
+00:01:46:31 -> load of bin 0.5 became 14.78 kg and contents volume 0.10 m^3
+00:01:55:43 -> bag weighting 4.84 kg disposed of at bin 0.5
+00:01:55:43 -> load of bin 0.5 became 19.61 kg and contents volume 0.15 m^3
+00:02:26:29 -> bag weighting 2.27 kg disposed of at bin 0.4
+00:02:26:29 -> load of bin 0.4 became 4.92 kg and contents volume 0.10 m^3
+00:02:27:41 -> bag weighting 2.56 kg disposed of at bin 0.1
+00:02:27:41 -> load of bin 0.1 became 12.84 kg and contents volume 0.15 m^3
+00:02:30:18 -> bag weighting 4.32 kg disposed of at bin 0.2
+00:02:30:18 -> load of bin 0.2 became 15.80 kg and contents volume 0.15 m^3
+00:02:35:44 -> bag weighting 7.82 kg disposed of at bin 0.5
+00:02:35:44 -> load of bin 0.5 became 27.43 kg and contents volume 0.20 m^3
+00:02:45:47 -> bag weighting 6.99 kg disposed of at bin 0.3
+00:02:45:47 -> load of bin 0.3 became 9.25 kg and contents volume 0.10 m^3
+00:02:53:43 -> bag weighting 3.90 kg disposed of at bin 0.5
+00:02:53:43 -> load of bin 0.5 became 31.33 kg and contents volume 0.25 m^3
+00:03:11:50 -> bag weighting 4.32 kg disposed of at bin 0.3
+00:03:11:50 -> load of bin 0.3 became 13.57 kg and contents volume 0.15 m^3
+00:03:17:48 -> bag weighting 3.31 kg disposed of at bin 0.4
+00:03:17:48 -> load of bin 0.4 became 8.23 kg and contents volume 0.15 m^3
+00:03:44:28 -> bag weighting 3.80 kg disposed of at bin 0.1
+00:03:44:28 -> load of bin 0.1 became 16.63 kg and contents volume 0.20 m^3
+00:04:01:48 -> bag weighting 4.73 kg disposed of at bin 0.4
+00:04:01:48 -> load of bin 0.4 became 12.96 kg and contents volume 0.20 m^3
+00:04:22:22 -> bag weighting 4.64 kg disposed of at bin 0.2
+00:04:22:22 -> load of bin 0.2 became 20.45 kg and contents volume 0.20 m^3
+00:04:30:13 -> bag weighting 6.28 kg disposed of at bin 0.5
+00:04:30:13 -> load of bin 0.5 became 37.62 kg and contents volume 0.30 m^3
+00:04:50:11 -> bag weighting 7.34 kg disposed of at bin 0.1
+00:04:50:11 -> load of bin 0.1 became 23.97 kg and contents volume 0.25 m^3
+00:04:53:10 -> bag weighting 5.05 kg disposed of at bin 0.3
+00:04:53:10 -> load of bin 0.3 became 18.62 kg and contents volume 0.20 m^3
+00:05:05:40 -> bag weighting 2.13 kg disposed of at bin 0.1
+00:05:05:40 -> load of bin 0.1 became 26.11 kg and contents volume 0.30 m^3
+00:05:44:08 -> bag weighting 7.93 kg disposed of at bin 0.5
+00:05:44:08 -> load of bin 0.5 became 45.54 kg and contents volume 0.35 m^3
+00:05:49:54 -> bag weighting 5.66 kg disposed of at bin 0.3
+00:05:49:54 -> load of bin 0.3 became 24.28 kg and contents volume 0.25 m^3
+00:05:54:43 -> bag weighting 3.94 kg disposed of at bin 0.3
+00:05:54:43 -> load of bin 0.3 became 28.21 kg and contents volume 0.30 m^3
+00:05:55:08 -> bag weighting 7.30 kg disposed of at bin 0.4
+00:05:55:08 -> load of bin 0.4 became 20.27 kg and contents volume 0.25 m^3
+00:06:07:37 -> bag weighting 4.45 kg disposed of at bin 0.5
+00:06:07:37 -> load of bin 0.5 became 50.00 kg and contents volume 0.40 m^3
+00:06:12:37 -> bag weighting 5.30 kg disposed of at bin 0.1
+00:06:12:37 -> load of bin 0.1 became 31.41 kg and contents volume 0.35 m^3
+00:06:14:54 -> bag weighting 3.01 kg disposed of at bin 0.4
+00:06:14:54 -> load of bin 0.4 became 23.28 kg and contents volume 0.30 m^3
+00:06:17:33 -> bag weighting 5.65 kg disposed of at bin 0.3
+00:06:17:33 -> load of bin 0.3 became 33.86 kg and contents volume 0.35 m^3
+00:06:29:25 -> bag weighting 4.63 kg disposed of at bin 0.4
+00:06:29:25 -> load of bin 0.4 became 27.91 kg and contents volume 0.35 m^3
+00:06:43:03 -> bag weighting 3.95 kg disposed of at bin 0.5
+00:06:43:03 -> load of bin 0.5 became 53.94 kg and contents volume 0.45 m^3
+00:06:43:08 -> bag weighting 6.05 kg disposed of at bin 0.3
+00:06:43:08 -> load of bin 0.3 became 39.91 kg and contents volume 0.40 m^3
+00:06:43:50 -> bag weighting 7.03 kg disposed of at bin 0.4
+00:06:43:50 -> load of bin 0.4 became 34.94 kg and contents volume 0.40 m^3
+00:06:55:53 -> bag weighting 3.77 kg disposed of at bin 0.2
+00:06:55:53 -> load of bin 0.2 became 24.21 kg and contents volume 0.25 m^3
+00:07:38:11 -> bag weighting 3.30 kg disposed of at bin 0.1
+00:07:38:11 -> load of bin 0.1 became 34.71 kg and contents volume 0.40 m^3
+00:07:39:46 -> bag weighting 3.80 kg disposed of at bin 0.2
+00:07:39:46 -> load of bin 0.2 became 28.02 kg and contents volume 0.30 m^3
+00:07:59:05 -> bag weighting 3.84 kg disposed of at bin 0.5
+00:07:59:05 -> load of bin 0.5 became 57.78 kg and contents volume 0.50 m^3
+00:08:02:39 -> bag weighting 7.55 kg disposed of at bin 0.5
+00:08:02:39 -> load of bin 0.5 became 65.33 kg and contents volume 0.55 m^3
+00:08:44:45 -> bag weighting 2.91 kg disposed of at bin 0.1
+00:08:44:45 -> load of bin 0.1 became 37.62 kg and contents volume 0.45 m^3
+00:09:04:43 -> bag weighting 3.49 kg disposed of at bin 0.4
+00:09:04:43 -> load of bin 0.4 became 38.44 kg and contents volume 0.45 m^3
+00:09:14:09 -> bag weighting 4.18 kg disposed of at bin 0.2
+00:09:14:09 -> load of bin 0.2 became 32.20 kg and contents volume 0.35 m^3
+00:09:23:56 -> bag weighting 2.81 kg disposed of at bin 0.3
+00:09:23:56 -> load of bin 0.3 became 42.72 kg and contents volume 0.45 m^3
+00:09:29:10 -> bag weighting 6.70 kg disposed of at bin 0.1
+00:09:29:10 -> load of bin 0.1 became 44.32 kg and contents volume 0.50 m^3
+00:09:35:42 -> bag weighting 4.39 kg disposed of at bin 0.4
+00:09:35:42 -> load of bin 0.4 became 42.82 kg and contents volume 0.50 m^3
+00:10:00:11 -> bag weighting 3.00 kg disposed of at bin 0.3
+00:10:00:11 -> load of bin 0.3 became 45.72 kg and contents volume 0.50 m^3
+00:10:05:08 -> bag weighting 7.77 kg disposed of at bin 0.5
+00:10:05:08 -> load of bin 0.5 became 73.10 kg and contents volume 0.60 m^3
+00:10:15:08 -> bag weighting 6.50 kg disposed of at bin 0.2
+00:10:15:08 -> load of bin 0.2 became 38.70 kg and contents volume 0.40 m^3
+00:10:36:41 -> bag weighting 2.09 kg disposed of at bin 0.5
+00:10:36:41 -> load of bin 0.5 became 75.19 kg and contents volume 0.65 m^3
+00:10:55:56 -> bag weighting 2.86 kg disposed of at bin 0.2
+00:10:55:56 -> load of bin 0.2 became 41.55 kg and contents volume 0.45 m^3
+00:11:13:08 -> bag weighting 3.49 kg disposed of at bin 0.5
+00:11:13:08 -> load of bin 0.5 became 78.68 kg and contents volume 0.70 m^3
+00:11:51:58 -> bag weighting 6.05 kg disposed of at bin 0.3
+00:11:51:58 -> load of bin 0.3 became 51.77 kg and contents volume 0.55 m^3
+00:11:56:00 -> bag weighting 2.15 kg disposed of at bin 0.4
+00:11:56:00 -> load of bin 0.4 became 44.98 kg and contents volume 0.55 m^3
+00:11:57:27 -> bag weighting 5.21 kg disposed of at bin 0.2
+00:11:57:27 -> load of bin 0.2 became 46.76 kg and contents volume 0.50 m^3
+00:12:04:49 -> bag weighting 3.65 kg disposed of at bin 0.4
+00:12:04:49 -> load of bin 0.4 became 48.63 kg and contents volume 0.60 m^3
+00:12:19:59 -> bag weighting 7.61 kg disposed of at bin 0.5
+00:12:19:59 -> load of bin 0.5 became 86.30 kg and contents volume 0.75 m^3
+00:12:47:04 -> bag weighting 6.27 kg disposed of at bin 0.1
+00:12:47:04 -> load of bin 0.1 became 50.59 kg and contents volume 0.55 m^3
+00:12:49:29 -> bag weighting 6.65 kg disposed of at bin 0.5
+00:12:49:29 -> load of bin 0.5 became 92.95 kg and contents volume 0.80 m^3
+00:12:56:04 -> bag weighting 7.93 kg disposed of at bin 0.4
+00:12:56:04 -> load of bin 0.4 became 56.56 kg and contents volume 0.65 m^3
+00:12:56:33 -> bag weighting 5.74 kg disposed of at bin 0.2
+00:12:56:33 -> load of bin 0.2 became 52.50 kg and contents volume 0.55 m^3
+00:12:56:44 -> bag weighting 6.36 kg disposed of at bin 0.3
+00:12:56:44 -> load of bin 0.3 became 58.13 kg and contents volume 0.60 m^3
+00:13:25:57 -> bag weighting 4.98 kg disposed of at bin 0.5
+00:13:25:57 -> load of bin 0.5 became 97.93 kg and contents volume 0.85 m^3
+00:13:35:00 -> bag weighting 2.37 kg disposed of at bin 0.3
+00:13:35:00 -> load of bin 0.3 became 60.50 kg and contents volume 0.65 m^3
+00:13:41:39 -> bag weighting 2.76 kg disposed of at bin 0.4
+00:13:41:39 -> load of bin 0.4 became 59.32 kg and contents volume 0.70 m^3
+00:13:52:18 -> bag weighting 5.56 kg disposed of at bin 0.5
+00:13:52:18 -> load of bin 0.5 became 103.50 kg and contents volume 0.90 m^3
+00:14:07:33 -> bag weighting 5.32 kg disposed of at bin 0.4
+00:14:07:33 -> load of bin 0.4 became 64.63 kg and contents volume 0.75 m^3
+00:14:30:57 -> bag weighting 7.88 kg disposed of at bin 0.5
+00:14:30:57 -> load of bin 0.5 became 111.37 kg and contents volume 0.95 m^3
+00:14:45:11 -> bag weighting 4.89 kg disposed of at bin 0.2
+00:14:45:11 -> load of bin 0.2 became 57.39 kg and contents volume 0.60 m^3
+00:14:45:12 -> bag weighting 5.75 kg disposed of at bin 0.3
+00:14:45:12 -> load of bin 0.3 became 66.25 kg and contents volume 0.70 m^3
+00:15:18:45 -> bag weighting 5.25 kg disposed of at bin 0.5
+00:15:18:45 -> load of bin 0.5 became 116.62 kg and contents volume 1.00 m^3
+00:15:21:41 -> bag weighting 4.77 kg disposed of at bin 0.4
+00:15:21:41 -> load of bin 0.4 became 69.40 kg and contents volume 0.80 m^3
+00:15:45:44 -> bag weighting 2.19 kg disposed of at bin 0.2
+00:15:45:44 -> load of bin 0.2 became 59.57 kg and contents volume 0.65 m^3
+00:15:47:42 -> bag weighting 4.46 kg disposed of at bin 0.4
+00:15:47:42 -> load of bin 0.4 became 73.86 kg and contents volume 0.85 m^3
+00:15:50:13 -> bag weighting 3.84 kg disposed of at bin 0.3
+00:15:50:13 -> load of bin 0.3 became 70.09 kg and contents volume 0.75 m^3
+00:15:58:27 -> bag weighting 7.46 kg disposed of at bin 0.5
+00:15:58:27 -> load of bin 0.5 became 124.08 kg and contents volume 1.05 m^3
 00:16:03:00 -> lorry 0 arrived at location 0.1
-00:16:05:05 -> bag weighting 2.49 kg disposed of at bin 0.2
-00:16:05:05 -> load of bin 0.2 became 78.45 kg and contents volume 0.80 m^3
+00:16:03:21 -> bag weighting 3.61 kg disposed of at bin 0.1
+00:16:03:21 -> load of bin 0.1 became 3.61 kg and contents volume 0.05 m^3
 00:16:05:10 -> load of bin 0.1 became 0.00 kg and contents volume 0.00 m^3
-00:16:05:10 -> load of lorry 0 became 107.66 kg and contents volume 0.48 m^3
-00:16:05:10 -> lorry <lorry.Lorry instance at 0x7f670112f8c0> left location 0.1
+00:16:05:10 -> load of lorry 0 became 50.59 kg and contents volume 0.27 m^3
+00:16:05:10 -> lorry <lorry.Lorry instance at 0x7fa413be0680> left location 0.1
 00:16:10:10 -> lorry 0 arrived at location 0.2
 00:16:12:20 -> load of bin 0.2 became 0.00 kg and contents volume 0.00 m^3
-00:16:12:20 -> load of lorry 0 became 186.11 kg and contents volume 0.88 m^3
-00:16:12:20 -> lorry <lorry.Lorry instance at 0x7f670112f8c0> left location 0.2
+00:16:12:20 -> load of lorry 0 became 110.17 kg and contents volume 0.60 m^3
+00:16:12:20 -> lorry <lorry.Lorry instance at 0x7fa413be0680> left location 0.2
 00:16:14:20 -> lorry 0 arrived at location 0.3
+00:16:14:35 -> bag weighting 6.40 kg disposed of at bin 0.4
+00:16:14:35 -> load of bin 0.4 became 80.26 kg and contents volume 0.90 m^3
 00:16:16:30 -> load of bin 0.3 became 0.00 kg and contents volume 0.00 m^3
-00:16:16:30 -> load of lorry 0 became 258.93 kg and contents volume 1.23 m^3
-00:16:16:30 -> lorry <lorry.Lorry instance at 0x7f670112f8c0> left location 0.3
+00:16:16:30 -> load of lorry 0 became 180.25 kg and contents volume 0.98 m^3
+00:16:16:30 -> lorry <lorry.Lorry instance at 0x7fa413be0680> left location 0.3
 00:16:18:30 -> lorry 0 arrived at location 0.5
-00:16:20:16 -> bag weighting 5.54 kg disposed of at bin 0.5
-00:16:20:16 -> load of bin 0.5 became 5.54 kg and contents volume 0.05 m^3
 00:16:20:40 -> load of bin 0.5 became 0.00 kg and contents volume 0.00 m^3
-00:16:20:40 -> load of lorry 0 became 320.83 kg and contents volume 1.53 m^3
-00:16:20:40 -> lorry <lorry.Lorry instance at 0x7f670112f8c0> left location 0.5
+00:16:20:40 -> load of lorry 0 became 304.34 kg and contents volume 1.50 m^3
+00:16:20:40 -> lorry <lorry.Lorry instance at 0x7fa413be0680> left location 0.5
 00:16:24:40 -> lorry 0 arrived at location 0.4
+00:16:25:30 -> bag weighting 6.26 kg disposed of at bin 0.3
+00:16:25:30 -> load of bin 0.3 became 6.26 kg and contents volume 0.05 m^3
 00:16:26:50 -> load of bin 0.4 became 0.00 kg and contents volume 0.00 m^3
-00:16:26:50 -> load of lorry 0 became 429.02 kg and contents volume 2.03 m^3
-00:16:26:50 -> lorry <lorry.Lorry instance at 0x7f670112f8c0> left location 0.4
+00:16:26:50 -> load of lorry 0 became 384.60 kg and contents volume 1.95 m^3
+00:16:26:50 -> lorry <lorry.Lorry instance at 0x7fa413be0680> left location 0.4
 00:16:30:50 -> load of lorry 0 became 0.00 kg and contents volume 0.00 m^3
-00:16:40:22 -> bag weighting 5.04 kg disposed of at bin 0.3
-00:16:40:22 -> load of bin 0.3 became 5.04 kg and contents volume 0.05 m^3
-00:16:42:21 -> bag weighting 6.17 kg disposed of at bin 0.1
-00:16:42:21 -> load of bin 0.1 became 6.17 kg and contents volume 0.05 m^3
-00:16:45:56 -> bag weighting 2.55 kg disposed of at bin 0.5
-00:16:45:56 -> load of bin 0.5 became 8.08 kg and contents volume 0.10 m^3
-00:17:00:35 -> bag weighting 4.36 kg disposed of at bin 0.2
-00:17:00:35 -> load of bin 0.2 became 4.36 kg and contents volume 0.05 m^3
-00:17:14:21 -> bag weighting 6.29 kg disposed of at bin 0.4
-00:17:14:21 -> load of bin 0.4 became 6.29 kg and contents volume 0.05 m^3
-00:17:40:15 -> bag weighting 4.90 kg disposed of at bin 0.5
-00:17:40:15 -> load of bin 0.5 became 12.98 kg and contents volume 0.15 m^3
-00:17:40:32 -> bag weighting 6.12 kg disposed of at bin 0.1
-00:17:40:32 -> load of bin 0.1 became 12.29 kg and contents volume 0.10 m^3
-00:17:43:34 -> bag weighting 5.17 kg disposed of at bin 0.2
-00:17:43:34 -> load of bin 0.2 became 9.53 kg and contents volume 0.10 m^3
-00:18:02:16 -> bag weighting 7.90 kg disposed of at bin 0.2
-00:18:02:16 -> load of bin 0.2 became 17.43 kg and contents volume 0.15 m^3
-00:18:08:41 -> bag weighting 7.31 kg disposed of at bin 0.3
-00:18:08:41 -> load of bin 0.3 became 12.35 kg and contents volume 0.10 m^3
-00:18:14:07 -> bag weighting 5.73 kg disposed of at bin 0.4
-00:18:14:07 -> load of bin 0.4 became 12.02 kg and contents volume 0.10 m^3
-00:18:23:36 -> bag weighting 6.56 kg disposed of at bin 0.1
-00:18:23:36 -> load of bin 0.1 became 18.85 kg and contents volume 0.15 m^3
-00:19:04:04 -> bag weighting 7.72 kg disposed of at bin 0.5
-00:19:04:04 -> load of bin 0.5 became 20.70 kg and contents volume 0.20 m^3
-00:19:18:23 -> bag weighting 7.61 kg disposed of at bin 0.1
-00:19:18:23 -> load of bin 0.1 became 26.46 kg and contents volume 0.20 m^3
-00:19:18:24 -> bag weighting 3.04 kg disposed of at bin 0.2
-00:19:18:24 -> load of bin 0.2 became 20.47 kg and contents volume 0.20 m^3
-00:19:21:37 -> bag weighting 3.87 kg disposed of at bin 0.4
-00:19:21:37 -> load of bin 0.4 became 15.89 kg and contents volume 0.15 m^3
-00:19:32:55 -> bag weighting 7.92 kg disposed of at bin 0.5
-00:19:32:55 -> load of bin 0.5 became 28.62 kg and contents volume 0.25 m^3
-00:19:36:48 -> bag weighting 6.31 kg disposed of at bin 0.3
-00:19:36:48 -> load of bin 0.3 became 18.66 kg and contents volume 0.15 m^3
-00:19:45:22 -> bag weighting 2.83 kg disposed of at bin 0.2
-00:19:45:22 -> load of bin 0.2 became 23.30 kg and contents volume 0.25 m^3
-00:19:48:44 -> bag weighting 3.79 kg disposed of at bin 0.5
-00:19:48:44 -> load of bin 0.5 became 32.41 kg and contents volume 0.30 m^3
-00:20:02:51 -> bag weighting 4.72 kg disposed of at bin 0.3
-00:20:02:51 -> load of bin 0.3 became 23.38 kg and contents volume 0.20 m^3
-00:20:02:51 -> bag weighting 6.84 kg disposed of at bin 0.1
-00:20:02:51 -> load of bin 0.1 became 33.30 kg and contents volume 0.25 m^3
-00:20:14:08 -> bag weighting 2.17 kg disposed of at bin 0.4
-00:20:14:08 -> load of bin 0.4 became 18.05 kg and contents volume 0.20 m^3
-00:20:21:33 -> bag weighting 7.94 kg disposed of at bin 0.1
-00:20:21:33 -> load of bin 0.1 became 41.23 kg and contents volume 0.30 m^3
-00:20:27:03 -> bag weighting 2.76 kg disposed of at bin 0.3
-00:20:27:03 -> load of bin 0.3 became 26.14 kg and contents volume 0.25 m^3
-00:20:27:43 -> bag weighting 5.74 kg disposed of at bin 0.5
-00:20:27:43 -> load of bin 0.5 became 38.15 kg and contents volume 0.35 m^3
-00:20:35:53 -> bag weighting 3.33 kg disposed of at bin 0.2
-00:20:35:53 -> load of bin 0.2 became 26.63 kg and contents volume 0.30 m^3
-00:20:54:40 -> bag weighting 7.12 kg disposed of at bin 0.5
-00:20:54:40 -> load of bin 0.5 became 45.27 kg and contents volume 0.40 m^3
-00:20:56:46 -> bag weighting 5.08 kg disposed of at bin 0.3
-00:20:56:46 -> load of bin 0.3 became 31.22 kg and contents volume 0.30 m^3
-00:21:17:06 -> bag weighting 5.88 kg disposed of at bin 0.3
-00:21:17:06 -> load of bin 0.3 became 37.11 kg and contents volume 0.35 m^3
-00:21:18:25 -> bag weighting 7.82 kg disposed of at bin 0.2
-00:21:18:25 -> load of bin 0.2 became 34.46 kg and contents volume 0.35 m^3
-00:21:39:35 -> bag weighting 3.00 kg disposed of at bin 0.3
-00:21:39:35 -> load of bin 0.3 became 40.11 kg and contents volume 0.40 m^3
-00:21:46:10 -> bag weighting 3.71 kg disposed of at bin 0.1
-00:21:46:10 -> load of bin 0.1 became 44.95 kg and contents volume 0.35 m^3
-00:21:48:54 -> bag weighting 3.96 kg disposed of at bin 0.5
-00:21:48:54 -> load of bin 0.5 became 49.24 kg and contents volume 0.45 m^3
-00:22:04:13 -> bag weighting 7.75 kg disposed of at bin 0.4
-00:22:04:13 -> load of bin 0.4 became 25.81 kg and contents volume 0.25 m^3
-00:22:22:33 -> bag weighting 2.95 kg disposed of at bin 0.1
-00:22:22:33 -> load of bin 0.1 became 47.89 kg and contents volume 0.40 m^3
-00:22:22:39 -> bag weighting 2.69 kg disposed of at bin 0.2
-00:22:22:39 -> load of bin 0.2 became 37.15 kg and contents volume 0.40 m^3
-00:22:38:06 -> bag weighting 5.50 kg disposed of at bin 0.2
-00:22:38:06 -> load of bin 0.2 became 42.65 kg and contents volume 0.45 m^3
-00:22:43:31 -> bag weighting 4.86 kg disposed of at bin 0.3
-00:22:43:31 -> load of bin 0.3 became 44.96 kg and contents volume 0.45 m^3
-00:22:49:46 -> bag weighting 3.78 kg disposed of at bin 0.5
-00:22:49:46 -> load of bin 0.5 became 53.02 kg and contents volume 0.50 m^3
-00:22:52:53 -> bag weighting 2.88 kg disposed of at bin 0.2
-00:22:52:53 -> load of bin 0.2 became 45.54 kg and contents volume 0.50 m^3
-00:23:00:02 -> bag weighting 6.07 kg disposed of at bin 0.3
-00:23:00:02 -> load of bin 0.3 became 51.03 kg and contents volume 0.50 m^3
-00:23:04:24 -> bag weighting 3.61 kg disposed of at bin 0.4
-00:23:04:24 -> load of bin 0.4 became 29.41 kg and contents volume 0.30 m^3
-00:23:29:17 -> bag weighting 5.38 kg disposed of at bin 0.3
-00:23:29:17 -> load of bin 0.3 became 56.41 kg and contents volume 0.55 m^3
-00:23:34:45 -> bag weighting 2.31 kg disposed of at bin 0.2
-00:23:34:45 -> load of bin 0.2 became 47.85 kg and contents volume 0.55 m^3
-00:23:39:37 -> bag weighting 7.62 kg disposed of at bin 0.1
-00:23:39:37 -> load of bin 0.1 became 55.51 kg and contents volume 0.45 m^3
-00:23:55:42 -> bag weighting 3.04 kg disposed of at bin 0.5
-00:23:55:42 -> load of bin 0.5 became 56.07 kg and contents volume 0.55 m^3
-00:23:58:26 -> bag weighting 5.12 kg disposed of at bin 0.1
-00:23:58:26 -> load of bin 0.1 became 60.63 kg and contents volume 0.50 m^3
-01:00:04:59 -> bag weighting 7.83 kg disposed of at bin 0.2
-01:00:04:59 -> load of bin 0.2 became 55.67 kg and contents volume 0.60 m^3
-01:00:24:14 -> bag weighting 2.78 kg disposed of at bin 0.2
-01:00:24:14 -> load of bin 0.2 became 58.46 kg and contents volume 0.65 m^3
-01:00:32:39 -> bag weighting 4.75 kg disposed of at bin 0.5
-01:00:32:39 -> load of bin 0.5 became 60.82 kg and contents volume 0.60 m^3
-01:00:36:00 -> bag weighting 3.49 kg disposed of at bin 0.4
-01:00:36:00 -> load of bin 0.4 became 32.90 kg and contents volume 0.35 m^3
-01:00:37:42 -> bag weighting 7.81 kg disposed of at bin 0.1
-01:00:37:42 -> load of bin 0.1 became 68.45 kg and contents volume 0.55 m^3
-01:00:38:21 -> bag weighting 6.99 kg disposed of at bin 0.2
-01:00:38:21 -> load of bin 0.2 became 65.45 kg and contents volume 0.70 m^3
-01:00:56:03 -> bag weighting 4.18 kg disposed of at bin 0.3
-01:00:56:03 -> load of bin 0.3 became 60.59 kg and contents volume 0.60 m^3
-01:01:21:21 -> bag weighting 4.89 kg disposed of at bin 0.5
-01:01:21:21 -> load of bin 0.5 became 65.71 kg and contents volume 0.65 m^3
-01:01:31:27 -> bag weighting 6.55 kg disposed of at bin 0.4
-01:01:31:27 -> load of bin 0.4 became 39.45 kg and contents volume 0.40 m^3
-01:01:51:59 -> bag weighting 2.85 kg disposed of at bin 0.5
-01:01:51:59 -> load of bin 0.5 became 68.56 kg and contents volume 0.70 m^3
-01:02:11:17 -> bag weighting 2.59 kg disposed of at bin 0.4
-01:02:11:17 -> load of bin 0.4 became 42.04 kg and contents volume 0.45 m^3
-01:02:17:37 -> bag weighting 5.07 kg disposed of at bin 0.3
-01:02:17:37 -> load of bin 0.3 became 65.66 kg and contents volume 0.65 m^3
-01:02:21:50 -> bag weighting 6.30 kg disposed of at bin 0.2
-01:02:21:50 -> load of bin 0.2 became 71.74 kg and contents volume 0.75 m^3
-01:02:25:25 -> bag weighting 4.51 kg disposed of at bin 0.5
-01:02:25:25 -> load of bin 0.5 became 73.07 kg and contents volume 0.75 m^3
-01:02:39:16 -> bag weighting 2.64 kg disposed of at bin 0.3
-01:02:39:16 -> load of bin 0.3 became 68.29 kg and contents volume 0.70 m^3
-01:02:40:14 -> bag weighting 3.80 kg disposed of at bin 0.1
-01:02:40:14 -> load of bin 0.1 became 72.24 kg and contents volume 0.60 m^3
-01:03:03:51 -> bag weighting 2.67 kg disposed of at bin 0.5
-01:03:03:51 -> load of bin 0.5 became 75.75 kg and contents volume 0.80 m^3
-01:03:07:39 -> bag weighting 3.02 kg disposed of at bin 0.5
-01:03:07:39 -> load of bin 0.5 became 78.76 kg and contents volume 0.85 m^3
-01:03:16:48 -> bag weighting 3.38 kg disposed of at bin 0.1
-01:03:16:48 -> load of bin 0.1 became 75.63 kg and contents volume 0.65 m^3
-01:03:18:33 -> bag weighting 2.20 kg disposed of at bin 0.4
-01:03:18:33 -> load of bin 0.4 became 44.23 kg and contents volume 0.50 m^3
-01:03:20:19 -> bag weighting 7.80 kg disposed of at bin 0.5
-01:03:20:19 -> load of bin 0.5 became 86.57 kg and contents volume 0.90 m^3
-01:03:23:00 -> bag weighting 4.24 kg disposed of at bin 0.2
-01:03:23:00 -> load of bin 0.2 became 75.99 kg and contents volume 0.80 m^3
-01:03:36:20 -> bag weighting 7.86 kg disposed of at bin 0.1
-01:03:36:20 -> load of bin 0.1 became 83.48 kg and contents volume 0.70 m^3
-01:03:44:33 -> bag weighting 4.63 kg disposed of at bin 0.3
-01:03:44:33 -> load of bin 0.3 became 72.93 kg and contents volume 0.75 m^3
-01:03:50:12 -> bag weighting 6.70 kg disposed of at bin 0.4
-01:03:50:12 -> load of bin 0.4 became 50.94 kg and contents volume 0.55 m^3
-01:04:10:40 -> bag weighting 4.94 kg disposed of at bin 0.1
-01:04:10:40 -> load of bin 0.1 became 88.42 kg and contents volume 0.75 m^3
-01:04:23:33 -> bag weighting 2.87 kg disposed of at bin 0.2
-01:04:23:33 -> load of bin 0.2 became 78.86 kg and contents volume 0.85 m^3
-01:05:06:57 -> bag weighting 4.32 kg disposed of at bin 0.3
-01:05:06:57 -> load of bin 0.3 became 77.25 kg and contents volume 0.80 m^3
-01:05:09:54 -> bag weighting 7.09 kg disposed of at bin 0.2
-01:05:09:54 -> load of bin 0.2 became 85.95 kg and contents volume 0.90 m^3
-01:05:21:50 -> bag weighting 6.00 kg disposed of at bin 0.2
-01:05:21:50 -> load of bin 0.2 became 91.95 kg and contents volume 0.95 m^3
-01:05:24:17 -> bag weighting 5.30 kg disposed of at bin 0.3
-01:05:24:17 -> load of bin 0.3 became 82.54 kg and contents volume 0.85 m^3
-01:05:29:05 -> bag weighting 3.19 kg disposed of at bin 0.4
-01:05:29:05 -> load of bin 0.4 became 54.12 kg and contents volume 0.60 m^3
-01:05:36:20 -> bag weighting 2.16 kg disposed of at bin 0.5
-01:05:36:20 -> load of bin 0.5 became 88.73 kg and contents volume 0.95 m^3
+00:16:51:12 -> bag weighting 7.81 kg disposed of at bin 0.3
+00:16:51:12 -> load of bin 0.3 became 14.07 kg and contents volume 0.10 m^3
+00:17:05:36 -> bag weighting 6.30 kg disposed of at bin 0.2
+00:17:05:36 -> load of bin 0.2 became 6.30 kg and contents volume 0.05 m^3
+00:17:42:26 -> bag weighting 7.68 kg disposed of at bin 0.1
+00:17:42:26 -> load of bin 0.1 became 11.29 kg and contents volume 0.10 m^3
+00:17:46:07 -> bag weighting 7.74 kg disposed of at bin 0.4
+00:17:46:07 -> load of bin 0.4 became 7.74 kg and contents volume 0.05 m^3
+00:17:48:14 -> bag weighting 6.94 kg disposed of at bin 0.3
+00:17:48:14 -> load of bin 0.3 became 21.01 kg and contents volume 0.15 m^3
+00:18:05:50 -> bag weighting 5.06 kg disposed of at bin 0.5
+00:18:05:50 -> load of bin 0.5 became 5.06 kg and contents volume 0.05 m^3
+00:18:11:26 -> bag weighting 5.32 kg disposed of at bin 0.3
+00:18:11:26 -> load of bin 0.3 became 26.33 kg and contents volume 0.20 m^3
+00:18:23:36 -> bag weighting 3.04 kg disposed of at bin 0.4
+00:18:23:36 -> load of bin 0.4 became 10.78 kg and contents volume 0.10 m^3
+00:18:36:08 -> bag weighting 6.25 kg disposed of at bin 0.1
+00:18:36:08 -> load of bin 0.1 became 17.54 kg and contents volume 0.15 m^3
+00:18:51:20 -> bag weighting 2.07 kg disposed of at bin 0.2
+00:18:51:20 -> load of bin 0.2 became 8.37 kg and contents volume 0.10 m^3
+00:18:55:04 -> bag weighting 4.75 kg disposed of at bin 0.5
+00:18:55:04 -> load of bin 0.5 became 9.81 kg and contents volume 0.10 m^3
+00:18:59:55 -> bag weighting 4.71 kg disposed of at bin 0.1
+00:18:59:55 -> load of bin 0.1 became 22.25 kg and contents volume 0.20 m^3
+00:19:04:47 -> bag weighting 7.29 kg disposed of at bin 0.2
+00:19:04:47 -> load of bin 0.2 became 15.66 kg and contents volume 0.15 m^3
+00:19:29:37 -> bag weighting 6.58 kg disposed of at bin 0.1
+00:19:29:37 -> load of bin 0.1 became 28.83 kg and contents volume 0.25 m^3
+00:19:59:29 -> bag weighting 5.88 kg disposed of at bin 0.3
+00:19:59:29 -> load of bin 0.3 became 32.21 kg and contents volume 0.25 m^3
+00:20:03:12 -> bag weighting 2.09 kg disposed of at bin 0.5
+00:20:03:12 -> load of bin 0.5 became 11.90 kg and contents volume 0.15 m^3
+00:20:11:36 -> bag weighting 5.18 kg disposed of at bin 0.1
+00:20:11:36 -> load of bin 0.1 became 34.01 kg and contents volume 0.30 m^3
+00:20:33:37 -> bag weighting 7.97 kg disposed of at bin 0.1
+00:20:33:37 -> load of bin 0.1 became 41.98 kg and contents volume 0.35 m^3
+00:20:45:53 -> bag weighting 3.06 kg disposed of at bin 0.4
+00:20:45:53 -> load of bin 0.4 became 13.84 kg and contents volume 0.15 m^3
+00:20:56:42 -> bag weighting 4.27 kg disposed of at bin 0.4
+00:20:56:42 -> load of bin 0.4 became 18.11 kg and contents volume 0.20 m^3
+00:20:58:22 -> bag weighting 2.39 kg disposed of at bin 0.3
+00:20:58:22 -> load of bin 0.3 became 34.59 kg and contents volume 0.30 m^3
+00:21:06:14 -> bag weighting 5.11 kg disposed of at bin 0.2
+00:21:06:14 -> load of bin 0.2 became 20.78 kg and contents volume 0.20 m^3
+00:21:10:51 -> bag weighting 2.56 kg disposed of at bin 0.1
+00:21:10:51 -> load of bin 0.1 became 44.54 kg and contents volume 0.40 m^3
+00:21:11:34 -> bag weighting 5.64 kg disposed of at bin 0.5
+00:21:11:34 -> load of bin 0.5 became 17.54 kg and contents volume 0.20 m^3
+00:21:11:41 -> bag weighting 6.33 kg disposed of at bin 0.4
+00:21:11:41 -> load of bin 0.4 became 24.44 kg and contents volume 0.25 m^3
+00:21:17:15 -> bag weighting 4.15 kg disposed of at bin 0.2
+00:21:17:15 -> load of bin 0.2 became 24.93 kg and contents volume 0.25 m^3
+00:21:22:00 -> bag weighting 3.04 kg disposed of at bin 0.3
+00:21:22:00 -> load of bin 0.3 became 37.63 kg and contents volume 0.35 m^3
+00:21:23:13 -> bag weighting 2.30 kg disposed of at bin 0.2
+00:21:23:13 -> load of bin 0.2 became 27.23 kg and contents volume 0.30 m^3
+00:21:32:39 -> bag weighting 6.61 kg disposed of at bin 0.5
+00:21:32:39 -> load of bin 0.5 became 24.15 kg and contents volume 0.25 m^3
+00:21:40:00 -> bag weighting 3.63 kg disposed of at bin 0.2
+00:21:40:00 -> load of bin 0.2 became 30.86 kg and contents volume 0.35 m^3
+00:22:01:25 -> bag weighting 4.75 kg disposed of at bin 0.3
+00:22:01:25 -> load of bin 0.3 became 42.38 kg and contents volume 0.40 m^3
+00:22:01:42 -> bag weighting 3.56 kg disposed of at bin 0.5
+00:22:01:42 -> load of bin 0.5 became 27.71 kg and contents volume 0.30 m^3
+00:22:04:45 -> bag weighting 7.32 kg disposed of at bin 0.4
+00:22:04:45 -> load of bin 0.4 became 31.75 kg and contents volume 0.30 m^3
+00:22:14:20 -> bag weighting 7.85 kg disposed of at bin 0.1
+00:22:14:20 -> load of bin 0.1 became 52.40 kg and contents volume 0.45 m^3
+00:22:24:22 -> bag weighting 2.34 kg disposed of at bin 0.3
+00:22:24:22 -> load of bin 0.3 became 44.72 kg and contents volume 0.45 m^3
+00:22:53:49 -> bag weighting 4.94 kg disposed of at bin 0.2
+00:22:53:49 -> load of bin 0.2 became 35.80 kg and contents volume 0.40 m^3
+00:23:13:33 -> bag weighting 3.83 kg disposed of at bin 0.3
+00:23:13:33 -> load of bin 0.3 became 48.56 kg and contents volume 0.50 m^3
+00:23:16:41 -> bag weighting 3.78 kg disposed of at bin 0.5
+00:23:16:41 -> load of bin 0.5 became 31.49 kg and contents volume 0.35 m^3
+00:23:41:04 -> bag weighting 3.72 kg disposed of at bin 0.2
+00:23:41:04 -> load of bin 0.2 became 39.52 kg and contents volume 0.45 m^3
+00:23:44:22 -> bag weighting 6.22 kg disposed of at bin 0.5
+00:23:44:22 -> load of bin 0.5 became 37.71 kg and contents volume 0.40 m^3
+00:23:45:52 -> bag weighting 3.80 kg disposed of at bin 0.3
+00:23:45:52 -> load of bin 0.3 became 52.36 kg and contents volume 0.55 m^3
+00:23:57:03 -> bag weighting 6.93 kg disposed of at bin 0.1
+00:23:57:03 -> load of bin 0.1 became 59.33 kg and contents volume 0.50 m^3
+01:00:04:21 -> bag weighting 3.52 kg disposed of at bin 0.5
+01:00:04:21 -> load of bin 0.5 became 41.23 kg and contents volume 0.45 m^3
+01:00:39:44 -> bag weighting 5.15 kg disposed of at bin 0.5
+01:00:39:44 -> load of bin 0.5 became 46.38 kg and contents volume 0.50 m^3
+01:01:03:41 -> bag weighting 3.35 kg disposed of at bin 0.4
+01:01:03:41 -> load of bin 0.4 became 35.11 kg and contents volume 0.35 m^3
+01:01:19:08 -> bag weighting 2.98 kg disposed of at bin 0.3
+01:01:19:08 -> load of bin 0.3 became 55.34 kg and contents volume 0.60 m^3
+01:01:23:31 -> bag weighting 2.27 kg disposed of at bin 0.1
+01:01:23:31 -> load of bin 0.1 became 61.59 kg and contents volume 0.55 m^3
+01:01:25:34 -> bag weighting 3.20 kg disposed of at bin 0.3
+01:01:25:34 -> load of bin 0.3 became 58.53 kg and contents volume 0.65 m^3
+01:01:41:22 -> bag weighting 2.75 kg disposed of at bin 0.1
+01:01:41:22 -> load of bin 0.1 became 64.34 kg and contents volume 0.60 m^3
+01:02:06:59 -> bag weighting 6.10 kg disposed of at bin 0.2
+01:02:06:59 -> load of bin 0.2 became 45.62 kg and contents volume 0.50 m^3
+01:02:08:31 -> bag weighting 3.50 kg disposed of at bin 0.5
+01:02:08:31 -> load of bin 0.5 became 49.88 kg and contents volume 0.55 m^3
+01:02:27:09 -> bag weighting 7.36 kg disposed of at bin 0.3
+01:02:27:09 -> load of bin 0.3 became 65.89 kg and contents volume 0.70 m^3
+01:02:31:09 -> bag weighting 7.30 kg disposed of at bin 0.2
+01:02:31:09 -> load of bin 0.2 became 52.92 kg and contents volume 0.55 m^3
+01:02:32:52 -> bag weighting 2.43 kg disposed of at bin 0.4
+01:02:32:52 -> load of bin 0.4 became 37.53 kg and contents volume 0.40 m^3
+01:02:39:47 -> bag weighting 7.50 kg disposed of at bin 0.1
+01:02:39:47 -> load of bin 0.1 became 71.84 kg and contents volume 0.65 m^3
+01:03:09:42 -> bag weighting 5.08 kg disposed of at bin 0.4
+01:03:09:42 -> load of bin 0.4 became 42.62 kg and contents volume 0.45 m^3
+01:03:33:14 -> bag weighting 7.53 kg disposed of at bin 0.2
+01:03:33:14 -> load of bin 0.2 became 60.45 kg and contents volume 0.60 m^3
+01:03:53:25 -> bag weighting 2.70 kg disposed of at bin 0.4
+01:03:53:25 -> load of bin 0.4 became 45.32 kg and contents volume 0.50 m^3
+01:03:55:41 -> bag weighting 2.67 kg disposed of at bin 0.2
+01:03:55:41 -> load of bin 0.2 became 63.12 kg and contents volume 0.65 m^3
+01:03:56:25 -> bag weighting 4.34 kg disposed of at bin 0.5
+01:03:56:25 -> load of bin 0.5 became 54.22 kg and contents volume 0.60 m^3
+01:04:03:41 -> bag weighting 2.21 kg disposed of at bin 0.1
+01:04:03:41 -> load of bin 0.1 became 74.05 kg and contents volume 0.70 m^3
+01:04:17:50 -> bag weighting 5.75 kg disposed of at bin 0.3
+01:04:17:50 -> load of bin 0.3 became 71.65 kg and contents volume 0.75 m^3
+01:04:34:23 -> bag weighting 3.09 kg disposed of at bin 0.1
+01:04:34:23 -> load of bin 0.1 became 77.14 kg and contents volume 0.75 m^3
+01:04:37:58 -> bag weighting 2.93 kg disposed of at bin 0.4
+01:04:37:58 -> load of bin 0.4 became 48.24 kg and contents volume 0.55 m^3
+01:04:53:37 -> bag weighting 4.08 kg disposed of at bin 0.3
+01:04:53:37 -> load of bin 0.3 became 75.73 kg and contents volume 0.80 m^3
+01:05:16:18 -> bag weighting 6.85 kg disposed of at bin 0.5
+01:05:16:18 -> load of bin 0.5 became 61.07 kg and contents volume 0.65 m^3
+01:05:17:32 -> bag weighting 7.47 kg disposed of at bin 0.3
+01:05:17:32 -> load of bin 0.3 became 83.20 kg and contents volume 0.85 m^3
+01:05:31:55 -> bag weighting 5.21 kg disposed of at bin 0.5
+01:05:31:55 -> load of bin 0.5 became 66.28 kg and contents volume 0.70 m^3
+01:05:34:45 -> bag weighting 6.83 kg disposed of at bin 0.1
+01:05:34:45 -> load of bin 0.1 became 83.97 kg and contents volume 0.80 m^3
+01:05:36:32 -> bag weighting 7.35 kg disposed of at bin 0.2
+01:05:36:32 -> load of bin 0.2 became 70.47 kg and contents volume 0.70 m^3
+01:05:45:59 -> bag weighting 5.97 kg disposed of at bin 0.2
+01:05:45:59 -> load of bin 0.2 became 76.44 kg and contents volume 0.75 m^3
