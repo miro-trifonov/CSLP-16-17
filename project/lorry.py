@@ -31,7 +31,6 @@ class Lorry:
             self.path.pop(0)
             return True
         else:
-            print "Lorry full"
             return False
 
     # Total statistic values updated here, in order to collect statistics only for completed journeys

@@ -109,7 +109,7 @@ def simulate(parameters, experiment_on):
         else:
             event_type = event[1][1]
             event_object = event[1][0]
-            # print str(time_dhms) + " " + event_type
+            # print str(time_dhms) + " " + event_type #prints event time and type in console
             if event_type == 'startGarbageCollection':
                 area = event_object
                 start_garbage_collection(area, time_now, report)
@@ -176,8 +176,8 @@ def simulate(parameters, experiment_on):
                     output_file.write(
                         "{} -> load of lorry {} became {:.2f} kg and contents volume {:.2f} m^3\n"
                             .format(time_dhms, lorry.id, lorry.load, lorry.volume))
-                output_file.write(
-                    "{} -> lorry {} left location {}\n".format(time_dhms, lorry.id, bin_id))
+                    output_file.write(
+                        "{} -> lorry {} left location {}\n".format(time_dhms, lorry.id, bin_id))
             else:
                 print "error on: " + event_type
     statistics = {'average trip duration': [], 'average no. trips': [], 'trip efficiency': [],
@@ -193,7 +193,8 @@ def simulate(parameters, experiment_on):
         statistics['average no. trips'].append(1.0 * lorry.number_of_journeys[0] / lorry.number_of_schedules)
         statistics['trip efficiency'].append(1.0 * lorry.total_load_collected / lorry.time_traveled * 60)
         statistics['average volume collected'].append(1.0 * lorry.total_volume_collected / lorry.number_of_journeys[0])
-        statistics['percentage of bins overflowed'].append(100.0 * area.overflown_bins / (area.overflown_bins + area.empty_bins))
+        statistics['percentage of bins overflowed'].append(
+            100.0 * area.overflown_bins / (area.overflown_bins + area.empty_bins))
     for name in statistics.keys():
         for i, area_statistic in enumerate(statistics[name]):
             if name == 'average trip duration':
@@ -206,15 +207,18 @@ def simulate(parameters, experiment_on):
                 output_file.write(
                     'area {}: {} {:.2f}\n'.format(i, name, area_statistic)
                 )
+        if statistics[name] == 0:
+            print "Not enough information for statistic {}".format(statistics[name])
+
         if name == 'average trip duration':
-            seconds = sum(statistics[name]) / statistics[name].__len__() * 3600.0
+            seconds = 1.0 * sum(statistics[name]) / len(statistics[name]) * 3600
             m, s = divmod(seconds, 60)
             output_file.write(
                 'overall {} {}.{}\n'.format(name, int(m), int(s))
             )
         else:
             output_file.write(
-                'overall {} {:.2f}\n'.format(name, sum(statistics[name]) / statistics[name].__len__())
+                'overall {} {:.2f}\n'.format(name, 1.0 * sum(statistics[name]) / len(statistics[name]))
             )
 
 
@@ -225,8 +229,22 @@ output_file = open('output.txt', 'w')
 if not parameters:
     print "Error"
     sys.exit()
-
-simulate(parameters, False)
+if 'experiment' not in parameters:
+    simulate(parameters, False)
+else:
+    experiment = parameters['experiment']
+    count = 0
+    for i in parameters[experiment]:
+        output_file.write('Experiment  # {}: {} {}\n---\n'.format(count, experiment, i))
+        if not experiment == 'serviceFreq':
+            parameters[experiment] = i
+            simulate(parameters, True)
+        else:
+            for j in range(0, parameters['noAreas']):
+                parameters['serviceFreq {}'.format(j)] = parameters[experiment]
+            simulate(parameters, True)
+        count += 1
+        output_file.write('--- \n')
 
 output_file.close()
 print 'success'

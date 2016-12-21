@@ -1,18 +1,14 @@
 import sys
 
-
 """parse_file -> given a filename as an input, parses a bin collection file it into a dictionary,
 provided it has rightly formatted input and prints error otherwise
 validate_input -> called automatically by parse_file this function checks if all needed arguments are given
 and displays warnings for some types of unrealistic input"""
 
-# TODO add check for correct row length in matrix length
-
 
 def parse_file(filename):
     arguments = {}
     is_valid = True
-    experiment = False
     expected_global_arguments_int = ['lorryVolume', 'lorryMaxLoad', 'binServiceTime', 'disposalDistrShape', 'noAreas']
     expected_global_arguments_float = ['binVolume', 'disposalDistrRate', 'bagVolume', 'bagWeightMin', 'bagWeightMax',
                                        'stopTime', 'warmUpTime']
@@ -28,15 +24,8 @@ def parse_file(filename):
     area_id = -1
     for line in parsed_file:
         tokens = map(str.strip, line.split())
-        if tokens is [] or tokens[0] == '#':
+        if not tokens or tokens[0] == '#':
             continue
-        elif tokens[0] == 'serviceFreq' and tokens[1] == 'experiment':
-            continue  # Feature not implemented yet
-        elif (tokens[0] == 'disposalDistrShape' or tokens[0] == 'disposalDistrRate') and tokens[1] == 'experiment' and \
-                tokens[2]:
-            tokens[1] = tokens[2]
-            experiment = tokens[0]
-
         elif road_layout_input == 'expect_arg':
             if tokens[0] == 'roadsLayout':
                 road_layout_input = True
@@ -50,7 +39,6 @@ def parse_file(filename):
             for i in range(0, tokens.__len__()):
                 tokens[i] = matrix_entry(tokens[i], 'roadsLayout', False)
                 if tokens[i] is False:
-                    # TODO change error message
                     print "Error \"not an integer\" possibly caused by missing row in road layout matrix"
                     is_valid = False
                     sys.exit()
@@ -62,24 +50,42 @@ def parse_file(filename):
         elif tokens[0] in expected_global_arguments_int and len(tokens) > 1:
             if tokens in arguments.keys():
                 print "Argument {} given two times".format(tokens[0])
+            if tokens[1] == 'experiment':
+                for i in range(2,tokens.__len__()):
+                    if i == 2:
+                        arguments[tokens[0]] = [tokens[i]]
+                    else:
+                        arguments[tokens[0]].append(tokens[i])
+                arguments['experiment'] = tokens[0]
+                expected_global_arguments_float.remove(tokens[0])
+                continue
             key, value = tokens[0], to_int(tokens[1], tokens[0])
             if value is False:
                 is_valid = False
                 sys.exit()
             arguments[key] = value
             expected_global_arguments_int.remove(key)
-            if len(tokens) > 2 and not experiment == tokens[0]:
+            if len(tokens) > 2 and not 'experiment' == tokens[0]:
                 print "Warning too many arguments given for: " + line
         elif tokens[0] in expected_global_arguments_float and len(tokens) > 1:
             if tokens in arguments.keys():
                 print "Argument {} given two times".format(tokens[0])
+            if tokens[1] == 'experiment':
+                for i in range(2,tokens.__len__()):
+                    if i == 2:
+                        arguments[tokens[0]] = [tokens[i]]
+                    else:
+                        arguments[tokens[0]].append(tokens[i])
+                arguments['experiment'] = tokens[0]
+                expected_global_arguments_float.remove(tokens[0])
+                continue
             key, value = tokens[0], to_float(tokens[1], tokens[0])
             if value is False:
                 is_valid = False
                 sys.exit()
             arguments[key] = value
             expected_global_arguments_float.remove(key)
-            if len(tokens) > 2 and not experiment == tokens[0]:
+            if len(tokens) > 2 and not 'experiment' == tokens[0]:
                 print "Warning too many arguments given for: " + line
         elif tokens[0] == 'areaIdx':
             area_id = tokens[1]
@@ -89,6 +95,13 @@ def parse_file(filename):
                                                                    "{} {}".format(arg, area_id))
             road_layout_input = 'expect_arg'
             remaining_road_matrix_len = int(arguments.get('noBins {}'.format(area_id))) + 1
+        elif tokens[0] == 'serviceFreq' and tokens[1] == 'experiment':
+            for i in range(2, tokens.__len__()):
+                if i == 2:
+                    arguments[tokens[0]] = [tokens[i]]
+                else:
+                    arguments[tokens[0]].append(tokens[i])
+            arguments['experiment'] = tokens[0]
         else:
             print "Unexpected input: " + line
             is_valid = False
@@ -103,6 +116,8 @@ def parse_file(filename):
 
 
 def validate_input(arguments, expect_road_input, remaining_global_arguments, areas):
+    if 'experiment' in arguments:
+        return True
     if expect_road_input:
         print "Error: Road layout matrix missing rows"
         is_valid = False
