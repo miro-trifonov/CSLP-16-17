@@ -11,10 +11,10 @@ class Lorry:
         self.late = False
         self.report = False
 
-        self.distance_passed = 0
-        self.number_of_journeys = [0,0] # (total, this schedule)
+        self.local_time_traveled = 0
+        self.number_of_journeys = [0, 0]  # (total, this schedule)
         self.number_of_schedules = 0
-        self.total_distance_passed = 0
+        self.time_traveled = 0
         self.total_volume_collected = 0
         self.total_load_collected = 0
 
@@ -38,8 +38,8 @@ class Lorry:
     def return_lorry(self):
         self.total_volume_collected += self.volume
         self.total_load_collected += self.load
-        self.total_distance_passed += self.distance_passed
-        self.distance_passed = 0
+        self.time_traveled += self.local_time_traveled
+        self.local_time_traveled = 0
         self.volume = 0
         self.load = 0
         self.number_of_journeys[1] += 1
@@ -47,5 +47,5 @@ class Lorry:
             self.travelling = False
             if self.report:
                 self.number_of_schedules += 1
-                self.number_of_journeys[0] = self.number_of_journeys[1]
+                self.number_of_journeys[0] += self.number_of_journeys[1]
                 self.number_of_journeys[1] = 0

@@ -17,7 +17,6 @@ if len(sys.argv) == 1:
 
 
 def simulate(parameters, experiment_on):
-
     def make_path(this_area, bin_numbers):
         distance_map = this_area.distance_map
         path = []
@@ -40,26 +39,28 @@ def simulate(parameters, experiment_on):
     # Sets up a route for next service and sends a lorry on it
     def start_garbage_collection(area, time, report):
         lorry = area.lorry
-        if report:
-            lorry.report == True
-            lorry.number_of_schedules += 1
         if lorry.travelling:
             lorry.late = True
             return False
+        if report:
+            lorry.report = True
         bins = area.bins
         bins_to_be_emptied = []
         for bin_id in bins:
             if bins[bin_id].to_be_emptied:
                 bins_to_be_emptied.append(bin_id)
-                if lorry.report: # using lorry.report here is a bit clumsy, but not enough justification for creating another parameter
-                    area.full_bins += 1
+                if lorry.report:  # using lorry.report here is a bit clumsy, but not enough justification for creating another parameter
+                    if bins[bin_id].overflow:
+                        area.overflown_bins += 1
+                    else:
+                        area.empty_bins += 1
             elif lorry.report:
-                area.bins_not_ready += 1
+                area.empty_bins += 1
         lorry.path = make_path(area, bins_to_be_emptied)
         lorry.travelling = True
         time_to_next_bin = lorry.path[0][1] / 60.0
         if lorry.report:
-            lorry.distance_passed += time_to_next_bin
+            lorry.local_time_traveled += time_to_next_bin
         event_queue.put((time + time_to_next_bin, (lorry, 'empty_bin')))
         event_queue.put((time + area.service_frequency, (area, 'startGarbageCollection')))
 
@@ -108,7 +109,7 @@ def simulate(parameters, experiment_on):
         else:
             event_type = event[1][1]
             event_object = event[1][0]
-            print str(time_dhms) + " " + event_type
+            # print str(time_dhms) + " " + event_type
             if event_type == 'startGarbageCollection':
                 area = event_object
                 start_garbage_collection(area, time_now, report)
@@ -142,14 +143,14 @@ def simulate(parameters, experiment_on):
                 if emptied and not is_last_bin:
                     time_to_next_bin = lorry.path[0][1] / 60.0
                     if lorry.report:
-                        lorry.distance_passed += time_to_next_bin
+                        lorry.local_time_traveled += time_to_next_bin
                     event_queue.put((time_now + service_time, ((lorry, this_bin.id, emptied), 'leave_location')))
                     event_queue.put((time_now + time_to_next_bin + service_time, (lorry, 'empty_bin')))
                 else:
                     delay = service_time * emptied
                     time_to_depo = areas[lorry.id].distance_map[this_bin.short_id][0] / 60.0
                     if lorry.report:
-                        lorry.distance_passed += time_to_depo
+                        lorry.local_time_traveled += time_to_depo
                     event_queue.put((time_now + delay, ((lorry, this_bin.id, emptied), 'leave_location')))
                     event_queue.put((time_now + time_to_depo + delay, (lorry, 'return_to_depo')))
             elif event_type == 'return_to_depo':
@@ -179,7 +180,42 @@ def simulate(parameters, experiment_on):
                     "{} -> lorry {} left location {}\n".format(time_dhms, lorry.id, bin_id))
             else:
                 print "error on: " + event_type
-    event_queue = Queue.PriorityQueue()
+    statistics = {'average trip duration': [], 'average no. trips': [], 'trip efficiency': [],
+                  'average volume collected': [], 'percentage of bins overflowed': []}
+    for area_id in areas:
+        area = areas[area_id]
+        lorry = area.lorry
+        if not (lorry.time_traveled and lorry.number_of_journeys[0] and lorry.total_load_collected
+                and lorry.total_volume_collected):
+            print "Not enough information for statistics in area {}".format(area_id)
+            break
+        statistics['average trip duration'].append(1.0 * lorry.time_traveled / lorry.number_of_journeys[0])
+        statistics['average no. trips'].append(1.0 * lorry.number_of_journeys[0] / lorry.number_of_schedules)
+        statistics['trip efficiency'].append(1.0 * lorry.total_load_collected / lorry.time_traveled * 60)
+        statistics['average volume collected'].append(1.0 * lorry.total_volume_collected / lorry.number_of_journeys[0])
+        statistics['percentage of bins overflowed'].append(100.0 * area.overflown_bins / (area.overflown_bins + area.empty_bins))
+    for name in statistics.keys():
+        for i, area_statistic in enumerate(statistics[name]):
+            if name == 'average trip duration':
+                seconds = area_statistic * 3600
+                m, s = divmod(seconds, 60)
+                output_file.write(
+                    'area {}: {} {}:{}\n'.format(i, name, int(m), int(s))
+                )
+            else:
+                output_file.write(
+                    'area {}: {} {:.2f}\n'.format(i, name, area_statistic)
+                )
+        if name == 'average trip duration':
+            seconds = sum(statistics[name]) / statistics[name].__len__() * 3600.0
+            m, s = divmod(seconds, 60)
+            output_file.write(
+                'overall {} {}.{}\n'.format(name, int(m), int(s))
+            )
+        else:
+            output_file.write(
+                'overall {} {:.2f}\n'.format(name, sum(statistics[name]) / statistics[name].__len__())
+            )
 
 
 # Start simulation. If experiment is on several simulations will be ran after one another

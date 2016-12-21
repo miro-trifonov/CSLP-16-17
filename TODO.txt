@@ -5,8 +5,11 @@ TODO:
 		trip efficiency (weight collected per unit of time):
 		avg volume collected (per trip/per schedule/per unit of time??):
 		percantage of overflowed bins (compute on each service schedule):
+			DONE for local
+		TODO change hours in statistics to min:sec; format properly and print in file
 
 	Support for experimentation
+		impelemnt that, make sure experimentation detection works in parser
 
 	Write correct test inputs and test
 
@@ -16,7 +19,7 @@ TODO:
 		Graphs form exepriment results
 		Check handout
 Optional and last day:
-	Commment and make code beautiful
+	Commment and make code beautiful -- DONE
 	
 	If there is time add extra feature
 

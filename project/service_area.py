@@ -15,8 +15,8 @@ class Area:
             self.bins[i] = a_bin
         self.distance_map = convert_road_matrix_to_distance_dict(route_map)
 
-        # self.overflown_bins = 0
-        self.full_bins = 0
+        self.overflown_bins = 0
+        # self.full_bins = 0
         self.empty_bins = 0
 
     def schedule_service(self):
