@@ -3,7 +3,7 @@ import math
 import random
 import sys
 import createObjects
-import my_parser
+import myParser
 
 """This program runs a simulation of a garbage disposal and collection in a city.
 It expects as an input, the name of a text file which contains the simulation parameters.
@@ -207,10 +207,9 @@ def simulate(parameters, experiment_on):
                 output_file.write(
                     'area {}: {} {:.2f}\n'.format(i, name, area_statistic)
                 )
-        if statistics[name] == 0:
-            print "Not enough information for statistic {}".format(statistics[name])
-
-        if name == 'average trip duration':
+        if not statistics[name]:
+            print "Not enough information for statistic {}".format(name)
+        elif name == 'average trip duration':
             seconds = 1.0 * sum(statistics[name]) / len(statistics[name]) * 3600
             m, s = divmod(seconds, 60)
             output_file.write(
@@ -224,7 +223,7 @@ def simulate(parameters, experiment_on):
 
 # Start simulation. If experiment is on several simulations will be ran after one another
 file_name = sys.argv[1]
-parameters = my_parser.parse_file(file_name)
+parameters = myParser.parse_file(file_name)
 output_file = open('output.txt', 'w')
 if not parameters:
     print "Error"

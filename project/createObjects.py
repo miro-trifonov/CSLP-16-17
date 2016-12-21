@@ -1,5 +1,5 @@
 import lorry
-import service_area
+import serviceArea
 
 
 """ Using the simulation params, creates the necessary service areas, bins and lorries """
@@ -13,5 +13,5 @@ def create_areas(parameters):
         freq, thresh, bins, road_map = parameters.get('serviceFreq {}'.format(i)), parameters.get(
             'thresholdVal {}'.format(i)), parameters.get('noBins {}'.format(i)), parameters.get(
             'roadsLayout {}'.format(i))
-        areas[i] = service_area.Area(i, freq, thresh, bins, bin_volume, truck, road_map)
+        areas[i] = serviceArea.Area(i, freq, thresh, bins, bin_volume, truck, road_map)
     return areas

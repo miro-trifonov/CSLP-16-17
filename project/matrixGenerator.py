@@ -1,6 +1,6 @@
 import random
 
-i = 1001
+i = 501
 biggest_number = 100
 percent_no_road = 0.2
 output_file = open('matrix.txt', 'w')
